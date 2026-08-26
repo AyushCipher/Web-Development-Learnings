@@ -1,0 +1,33 @@
+{
+  "name": "kafka-app",
+  "version": "1.0.0",
+  "description": "Kafka pub/sub demonstrated via a signup event fanning out to an independent email consumer and notification consumer.",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "create-topics": "node src/admin/createTopics.js",
+    "consumer:email": "node src/consumers/email.consumer.js",
+    "consumer:notification": "node src/consumers/notification.consumer.js",
+    "test": "jest"
+  },
+  "keywords": [
+    "kafka",
+    "producer",
+    "consumer",
+    "pub-sub"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "kafkajs": "^2.2.4",
+    "mongoose": "^8.9.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.9",
+    "supertest": "^7.0.0"
+  }
+}

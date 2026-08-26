@@ -1,0 +1,76 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Isko add krte ha taki jb kisi box ma border aur padding add kre to box ki dimesion/size change na ho pr content ka size change ho*/
+}
+.wrapper {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.container {
+    height: 100%;
+    max-width: 1200px;
+    /* Kisi content ka left aur right side ka margin equal krne k liye 
+    meaning content ko center ma lane k liye ise use krte ha */
+    margin: 0 auto;
+    padding: 20px;
+  }
+.container h1 {
+    margin: 20px 0; /* (margin: top&bottom right&left) */
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 3rem;
+}
+.gallery{
+    display: flex;
+    flex-wrap: wrap; /* Flex bnaya kuki images k bich ma gap create krna ha 
+    wrap lgaya taki sari images horizontally arranged na rahe*/
+    justify-content: space-between; /* Images k bich ma gap dalne k liye */
+}
+.card{
+    width:32%;
+    position: relative; /* humko image1 text ko image k upr overlap krwana h isliye position absolute use krwana pdega 
+    lekin uske liye parent ko non static krne k liye position:relative use krna pdega */
+    margin-bottom: 20px;
+    border-radius: 10px; /* Images k corner ko round krne k liye border radius ka use kiye */
+    overflow: hidden;/* Third image right size ma overflow kr rha tha jis se ki uska size extra nzar aa rha tha 
+    kuki wo chiz repeat na ho isliye overflow ko sbhi direction se hidden kr diya */
+}
+.card img{
+    width: 100%; /* Parent yani ki card ka 32% wla width ko aquire kr lega */
+    height: 100%; /* Bina height set kiye image ka down part ka border round nhi hora tha isliye height 100 % kr diye taki niche se b iamge ka border round ho jye lekin iske chlte image1 wla text chup jyega */
+    filter: grayscale(100%); /* using filter so that image appears full black&white */
+    box-shadow: 0 0 20px #333;
+    object-fit: cover; 
+    /* This property tells the content to fill the container in a variety of ways; 
+    such as "preserve that aspect ratio" or "stretch up and take up as much space as possible". */
+}
+.card:hover{
+    transform: scale(1.03);
+    transition: 0.5;
+    filter: drop-shadow(0 0 10px #333); /* Image k side ma shadow nzar ayega */
+}
+.card:hover img{
+    filter: grayscale(0%);
+}
+.card figcaption{
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    padding: 25px;
+    width: 100%; /*  % signifes- figcaption ka parent yaani card ka 100% */
+    height: 20%; /*% signifes- figcaption ka parent yaani card ka 20% */
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    opacity: 0;
+    border-radius: 0 0 10px 10px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%,rgba(255,255,255,0) 100%);
+    transition: 0.3;
+}
+.card:hover figcaption{
+    opacity: 1;
+    transform: scale(1.03);
+}

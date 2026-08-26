@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.quiz-container {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.settings, .quiz, .result {
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #828dff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #6c7ae0;
+}
+
+.quiz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#progress-bar {
+    width: 70%;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 20px;
+    margin: 20px 0;
+}
+
+#progress {
+    height: 100%;
+    width: 0%;
+    background-color: #76c7c0;
+}
+
+#timer {
+    font-size: 1.2em;
+    margin: 20px 0;
+}
+
+#question-container {
+    margin: 20px 0;
+}
+
+#answer-buttons {
+    list-style: none;
+    padding: 0;
+}
+
+#answer-buttons li {
+    margin: 10px 0;
+}
+
+#answer-buttons button {
+    width: 100%;
+    padding: 12px;
+    background-color: #ffffff;
+    border: 2px solid black;
+    border-radius: 6px;
+    color: black;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#answer-buttons button:hover {
+    background-color: #f0f0f0;
+}
+
+#answer-buttons button:hover {
+    background-color: #e0e0e0;
+}

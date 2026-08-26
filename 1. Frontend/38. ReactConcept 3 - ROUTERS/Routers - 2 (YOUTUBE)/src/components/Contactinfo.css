@@ -1,0 +1,18 @@
+.contact-info-container {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: left; /* Align text to left */
+}
+
+.contact-info-item {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #333;
+}

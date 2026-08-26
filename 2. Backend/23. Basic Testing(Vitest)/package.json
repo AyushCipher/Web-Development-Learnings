@@ -1,0 +1,26 @@
+{
+  "name": "basic-testing-vitest",
+  "version": "1.0.0",
+  "description": "Unit, boundary, integration, and end-to-end testing with Vitest, against a small cart API",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:unit": "vitest run test/unit",
+    "test:boundary": "vitest run test/boundary",
+    "test:integration": "vitest run test/integration",
+    "test:e2e": "vitest run test/e2e"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mongoose": "^8.18.0"
+  },
+  "devDependencies": {
+    "supertest": "^7.1.1",
+    "vitest": "^3.2.4"
+  }
+}

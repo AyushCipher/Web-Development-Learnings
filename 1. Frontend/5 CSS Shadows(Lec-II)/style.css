@@ -1,0 +1,22 @@
+h1{
+    text-shadow: 3px 3px 3px pink;
+    /* For creating shadow we need 2 dimesions 3px 3px but for adding blur effect we wrote another 3px */
+
+    /* The first 3px value determines horizontal distance from original text whereas
+    second 3px value determines vertical distance from original text */
+
+    text-shadow: 3px 3px 3px green,6px 6px 6px red;
+    /* We can also create mutliple color shadows */
+}
+.box{
+    background-color: aqua;
+    width:200px;
+    height:200px;
+    /* By Default the color of box's shadow depends on the color of text inside box */
+    box-shadow: 10px 10px ;
+    box-shadow: 10px 10px 15px green,30px 30px 45px  brown;
+    
+    /* We can change the direction of shadows from right bottom to left and up by appliying -ve values in pixels */
+    /* box-shadow: -10px -10px 15px green,10px 10px 15px brown;  */
+    color: red;
+}

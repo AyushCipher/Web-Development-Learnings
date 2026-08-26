@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- WAYS OF APPLYING CSS -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        p{
+             color: green /*!important*/;  
+             /* !important if written has highest precedence but usually
+              it is considered as a bad practice so we dont use it */
+        }
+        .ayush{
+            color: blue;
+        }
+        #anish{
+            color:orange
+        }
+    </style>
+
+</head>
+
+<body>
+  
+    <!-- Concept of Specifity:- (Order of precedence)
+    1.Inline CSS >> 2.Id Selector >> 3.Classes,Pseudo Selector >> 4.Element Selector -->
+
+    <p class="ayush" id="anish" style="color: aqua">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam, odit..</p>
+
+</body>
+</html>
+
+
+<!-- # DIFFERENCES BETWEEN ID AND CLASS:-
+
+Class: The class attribute is used to define a group of elements that share the same styling or behavior. Multiple elements can have the same class, allowing for reusable and consistent styling.
+
+ID :- The id attribute is used to identify a single unique element within a document. Each ID must be unique within a page, meaning no two elements can have the same ID.
+
+# Key Differences:- 
+1. Reusability vs. Uniqueness: Classes can be reused across multiple elements, while IDs must be unique to a single element.
+2. Specificity: IDs have higher specificity than classes, which means that styles applied using an ID will take precedence over styles applied using a class.
+3. Multiple Usage: An element can have multiple classes, but it can only have one ID.
+4. Purpose: Use classes for applying the same styles or behaviors to multiple elements. Use IDs for identifying a single unique element, often for scripting purposes (e.g., JavaScript targeting) or for anchoring (e.g., href="#unique-element"). -->

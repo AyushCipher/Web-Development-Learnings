@@ -1,0 +1,23 @@
+.container{
+    background-color: brown;
+    height: 500px;
+    border: 3px solid black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 30px 1fr 30px;
+    gap:3px;
+}
+.box{
+    background-color: aqua;
+    border: 3px solid black;
+    /* width: 80px; */
+    /* height: 80px; */
+}
+#box1,#box4{
+    grid-column-start: 1;
+    grid-column-end: 4; /* Comment out width */
+}
+#box3{
+    grid-column-start: 2;
+    grid-column-end: 4; /* Comment out height for having box 3 height and width till box 6 */
+}

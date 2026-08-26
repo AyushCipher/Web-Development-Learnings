@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script src="b. index.js" defer></script> -->
+
+    Hello Jee
+    
+    <!-- User Experience ko acha krne k liye script ko html body k niche likhte ha ya fir defer keyword ka use kr k html ko pehle execute krwate h, 
+    script ko defer/pause kr k bcz in case agr script ma kuch aisi chiz define ha jo abi tk body ya html code k through render hi nhi hui ha
+    to us case ma bug ya error aa skta ha -->
+
+    <!-- In modern web development and production environments, the defer attribute is the preferred method for loading JavaScript efficiently and safely.
+    When You Use defer:
+        * Browser begins downloading the script immediately when it encounters the <script src="..." defer> tag.
+        * But it defers execution until the DOM is fully parsed.
+        * This gives a parallel advantage: HTML is parsed while script is downloaded.
+
+    When Script is at the Bottom (No defer):
+        * The browser doesn't even see the <script> tag until after parsing all HTML.
+        * When it encounters script tag, only then it starts fetching and executing the script.
+        * There's no overlap between HTML parsing and script downloading. -->
+
+
+        <!-- Let’s say your HTML takes 100ms to parse and your script takes 50ms to download.
+
+            # With defer:
+                * Script download starts at 10ms (early in head)
+                * HTML finishes parsing at 100ms
+                * Script is already downloaded or almost done → executes immediately
+
+            # Without defer (script at bottom):
+                * HTML finishes parsing at 100ms
+                * Script download starts after 100ms
+                * Script then takes 50ms to download
+                * Total delay to execute = 150ms
+
+            Hence, defer saved you ~50ms in this case. -->
+
+
+
+    <!-- Why script is not written before body tag?
+
+        1. Parsing Stops: When the browser encounters a <script> tag without async or defer attributes, it stops parsing the HTML to fetch and execute the script. 
+           This means no further HTML elements are processed until the script is completely loaded and executed.
+        2. Rendering Delayed: Because the browser is busy executing the script, it delays the rendering of the page. 
+           The user might see a blank page or partial content until the script finishes execution.
+        3. DOM Not Ready: If the script tries to access or manipulate DOM elements that haven't been parsed yet, it will fail.
+    
+    -->
+
+
+
+
+    <!-- DATA TYPES IN JAVASCRIPT:-
+    
+    We can classify primitive data types in JS as follows:
+
+    Primitive data types basic, single-value data types. They are immutable (cannot be changed) and stored directly in memory.
+    
+    1. Number : Represents numbers (integers & floating point).
+
+    2. String : Represents text. 
+
+    3. Boolean : It has a value of either TRUE or FALSE.
+
+    4. Undefined : undefined is a primitive type in JavaScript which indicates that a variable has been declared but has not yet been assigned a value.
+    This avoids unexpected errors when accessing undeclared variables and prevents runtime errors and helps check for missing properties.
+    Eg:- let person = { name: "Ayush" };
+        console.log(person.age); // undefined (since 'age' is not defined)
+
+    5. Null : It represents the intentional absence of any object value. It is used to explicitly indicate that a variable should be empty.
+    It is typically used when you want to reset or clear a variable to indicate that it does not hold any value or object.
+    
+
+    # KEY DIFFERENCES BETWEEN UNDEFINED AND NULL IN JS:-
+
+    * undefined is the default value for uninitialized variables while null is explicitly assigned to a variable to indicate that it should have no value.
+    * typeof undefined returns "undefined" while typeof null returns "object" (this is actually a bug in JavaScript that has been kept for legacy reasons :) ).
+
+
+    6. BigInt : BigInt values represent numeric values which are too large to be represented by the number primitive. 
+    Eg:- const alsoHuge = BigInt(9007199254740991);
+    BigInt is a built-in JavaScript object that provides a way to represent whole numbers larger than 2^53-1 which is the largest number JavaScript can reliably represent with the Number primitive. 
+    BigInt is useful for calculations that involve very large integers, such as those in cryptography or precise scientific computations.                  
+    
+
+    7. Symbol : Symbol is a primitive data type introduced in ES6. It is used to create unique identifiers that are immutable and cannot be accidentally overwritten.
+                It is used as object keys to prevent accidental property name conflicts.
+
+
+
+    NON-PRIMITIVE DATA TYPES:- These types store collections or complex data.
+    They are mutable and stored by reference (if you copy them, both variables refer to the same memory location).
+    1. ARRAY
+    2. OBJECT
+    3. FUNCTIONS  
+    
+    <script src="b. index.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,40 @@
+.job-details {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #fefefe;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.job-details p {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.job-details b {
+  color: #333;
+}
+
+.job-details .btn {
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 30px;
+}
+
+.job-details .button1 {
+  background-color: #000;
+  color: #fff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.job-details .button1:hover {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid black;
+}

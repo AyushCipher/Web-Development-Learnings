@@ -1,0 +1,51 @@
+*{
+    box-sizing: border-box;
+}
+.container{
+    height:400px;
+    border: 2px solid black;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-start;
+    /* gap:10px; */
+}
+.box{
+    border: 1px solid brown;
+    background-color: aqua;
+    width:100px;
+    /* can use flex-basis with percentages also */
+    flex-basis: 50%;/* To use this attribute, you must use border sizing: border-box kuki border/padding box k width ko thoda badha deta ha..
+    to kuki box ka dimension pehle jasa rahe isliye border box property use krte ha taki border/padding k add krne se box ka dimension initial jasa hi rhe
+     bhale content chota ho jaye koi dikkat nhi */
+
+    flex-basis: 100px; /*Used to increase the width of element, works same as width attribute(just an alternative to width) */
+    /* Diff between them is:
+    If we display a large content on one box(say box1),
+    then by using flex-basis whole part of content would be displayed inside the box,
+    but if we use width then a part of it only gets diplsayed depending upon size mentioned.
+
+    /* flex-grow: 1; --> All boxes/elements grow with an equal size horizontally*/ 
+}
+#box1{
+    order: 1;
+    /* flex-grow: 1; ---> Only the box within which this tag is used has increment in its size */
+    /* 0 is default value of flex-grow */
+    flex-shrink: 4; /*  The one box for which this attribute is used shrinks faster as comparative to other boxes 
+    when viewport is shrinked or it's size is decreased.
+    Meaning-Shrink speed increases ; default value:- 1*/
+}
+#box3{
+    order: 8;
+    /* flex-shrink:3; */
+    align-self:flex-end;
+    /* To make align-self work,comment down flex-wrap above */
+}
+#box2{
+    order: 8;
+    /* Center the alignments for one of the items inside a flexible element */
+    align-self:stretch; 
+}

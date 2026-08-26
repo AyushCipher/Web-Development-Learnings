@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Absolute Units are:- 
+     pixel,cm,mm,inches ->
+     
+    Generally, we dont use absolute units, 
+    instead relative units are highly used to create websites more responsive.
+     
+
+     Relative units are:-
+     1.Relative to font-size - em(relative to parent element) eg: [1em=1* font-size of parent]
+                               rem(relative to root element) DEF: jo bhi property/dimesions html tag provide kr rha ha 
+                               uske according dimesions set ho jyenge. eg:10rem= 10*[default-16])
+
+     2.Relative to Viewport - vw(1/100 x width of viewport)
+                              vh(1/100 x height of viewport)
+
+
+     <!-Percentage Unit in CSS -->
+    <style>
+        #div1{
+            background-color: green;
+            width: 500px;
+            height: 100px;
+        }
+        #div2{
+            background-color: aqua;
+            width: 10%; /* 10 percent of parent(div1) ki width acquire kro */
+            height: 10%;/* 10 percent of parent(div1) ki height acquire kro */
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <div id="div2"></div>
+    </div>
+</body>
+</html> 

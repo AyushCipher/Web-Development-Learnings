@@ -1,0 +1,23 @@
+/* Root k help se hm variables ko globally define kr k usse kisi b function k andr use kr skte ha */
+:root{
+    --dark-red:#981a2c; /* --->Global Variable */
+}
+.container{
+    border: 1px solid brown;
+    background-color: blueviolet;
+    height: 300px;
+    width: 300px;
+    background-color: var(--dark-red);
+}
+.box{
+    border: 2px solid green;
+    background-color: aqua;
+    --dark-red:#981a2c; /* --->Local Variable */
+    /* Agr kisi specific div/class/id  k andr variable define kroge 
+    to vo ek local variable bn jyega ,jiske chlte hm usse div/class/id k bahar use nhi kr skte */
+    color: var(--dark-red);
+}
+/* Q. What is the difference between using variable inside a root and univerdal selector?
+Ans- Both will give same output but root is broadly used since :root is simply a pseudo selector for the <html> element. When setting CSS custom properties/vars, they are being set on the root element 
+- think of it like a global variable.
+If you use * (universal selector) - it's setting the custom property/var on EVERY element (e.g., div, p, span, ect.) in the DOM. */

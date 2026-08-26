@@ -1,0 +1,8 @@
+# Deliberately NOT ignoring .git - index.js shells out to
+# `git rev-parse --short HEAD` at startup for the /version route (see the
+# Q&A there). Excluding .git here would make that always fall back to
+# "unknown" inside the built image, defeating the whole point of that
+# route: confirming which commit is actually running after a deploy.
+node_modules
+.env
+.github

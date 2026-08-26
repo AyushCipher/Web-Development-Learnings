@@ -1,0 +1,15 @@
+.box{
+    max-height:100px;
+    border: 1px solid black;
+    overflow: scroll; /*---> Can scroll up and down to view the content that is out of box
+    overflow: visible; ---> Overflow of extra content outisde the box can be seen(by default behaviour of overflow property)
+    overflow: hidden; ---> The content overflowed outside the box can be hidden by this tag
+    overflow: auto;---> If content can be fit inside box, then by this tag box behaves as visible(by default) ,otherwise in case of overflow it behaves like scroll.*/
+}
+.mydiv{
+    margin:10px;
+    min-height: 100px;
+    /* In min-height agr mera content box k size se kam ha to box ka size remains same whereas 
+    if it extends the size of box then size of box extends in order keep the all content inside it */
+    border: 1px solid black;
+}

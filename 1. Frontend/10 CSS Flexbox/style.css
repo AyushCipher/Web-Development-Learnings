@@ -1,0 +1,73 @@
+.container{
+    height: 500px;
+    border: 2px solid black;
+
+    /* By default, flex box k hisaab se main axis horizontal(x axis) hota h ya flex-direction: row hota ha
+    Element(div) is also converted into flexbox*/
+    display:flex;  
+
+    /* Using this tag we can display the box vertically 
+    Changes main axis direction from horizontal to vertical*/
+    flex-direction: column;
+
+    /* Using this tag we can display the box like display:flex ,i.e, horizontally */
+    flex-direction: row;
+
+    /* Using this tag box will be displayed from right to left side vertically */
+    flex-direction: column-reverse;
+
+    /* Using this tag box will be displayed from right to left side horizontally*/
+    flex-direction: row-reverse;
+
+    /* Using this tag, as soon as the viewport size decreases the box immediately does not loses it's size,
+    rather due to shrinking it moves down to next line and as all the boxes come to vertical positions from horizontal,
+    then all box's size decreases.*/
+    flex-wrap: wrap;
+
+    /*Default value:- flex-wrap: nowrap;
+    (behaves normally ; it squeezes upon shrinking the viewport and doesn't move to next line)*/
+
+    /* Have same functionality but rather than moving to next line below it moves on above line leaving behind rest boxe's below */
+    flex-wrap: wrap-reverse;
+
+    /* Using flex flow we can use both flex direction and flex wrap together,i.e.,
+    It is a shorthand notation for using both flex direction and flex wrap together */
+    flex-flow: row wrap;
+    flex-flow: row-reverse wrap;
+    
+
+    /* JUSTIFY-CONTENT ALIGNS FLEXBOX/CONTAINER ITEMS ON MAIN AXIS(X-AXIS) */
+    justify-content: flex-start;/* --> All boxes are arranged from starting point of main axis(x-axis)*/
+    justify-content: flex-end;/* --> All boxes are arranged from end point(reverse/right to left) of main axis(x-axis)*/
+    justify-content: center; /* --> All boxes are align/stack at centre with no space between each other but equal spaces on right and left*/
+
+    /* All boxes have equal spaces between them but left&right most box/item doen't have equal spaces from parent box boder */
+    justify-content: space-around; 
+    /* To make the spaces equal on both left&right most side ,use this tag  */
+    justify-content: space-evenly;
+    /* All boxes/items have equal spaces between them and first and last box/item are sticked to starting and ending of parent container*/
+    justify-content: space-between;
+
+   /* ALIGN-ITEMS ALIGNS FLEXBOX/CONTAINER ITEMS ON CROSS AXIS(Y-AXIS) */
+   align-items: flex-start; /* All items are placed at start of cross axis(y-axis) */
+   align-items: flex-end; /* All items are placed at end of cross axis(y-axis) */
+   align-items: center;  /* All items are placed at center of cross axis(y-axis) */
+   align-items: stretch; /*default value; just streches the boxes from upside down as it was before handor by default*/
+   align-items: baseline; 
+   /* If the content/item's/box's sizes are different then by using this tag all boxes of different sizes come at an equal base/floor 
+   i.e., their appearance looks as different sizes of boxes are kept on a straight line */
+
+   /* gap: 10px; --->can be used to provide a gap only in between boxes/items 
+    IMP:-It is a shorthand notation and can be used to either create gaps row-gap or column-gap */
+ 
+   align-items: space-around;
+   align-items: space-evenly;
+
+
+}
+.box{
+    border: 1px solid rgb(122, 32, 32); 
+    background-color: aqua;
+    /* On inspecting,if we shrink the output page the width of box decreases even if we apply width of boxes hardcodely*/ 
+    width:100px;
+}

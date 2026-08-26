@@ -1,0 +1,1 @@
+ALTER TABLE "asset" ADD COLUMN "price" integer DEFAULT 500 NOT NULL;

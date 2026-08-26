@@ -1,0 +1,39 @@
+{
+  "jobs": [
+    {
+      "id": "1",
+      "title": "Senior React Developer",
+      "salary": 50000,
+      "location": "London, UK",
+      "description": "Responsible for leading front-end development using React.js, collaborating with UI/UX designers, and mentoring junior developers to build scalable and maintainable web applications."
+    },
+    {
+      "id": "2",
+      "title": "Frontend Developer",
+      "salary": 40000,
+      "location": "Chicago, USA",
+       "description": "Designs and implements user-facing features using HTML, CSS, JavaScript, and frameworks like React or Angular, ensuring responsive and accessible web interfaces."
+    },
+    {
+      "id": "3",
+      "title": "Backend Developer",
+      "salary": 60000,
+      "location": "San Fransico, USA",
+      "description": "Builds and maintains server-side application logic, APIs, and databases, ensuring secure, scalable, and high-performance backend systems using technologies like Node.js, Python, or Java."
+    },
+    {
+      "id": "4",
+      "title": "Product Manager",
+      "salary": 70000,
+      "location": "Paris, France",
+      "description": "Leads product development strategy, defines product roadmaps, gathers user requirements, and works with cross-functional teams to deliver high-impact features and solutions."
+    },
+    {
+      "id": "5",
+      "title": "UI Designer",
+      "salary": 65000,
+      "location": "Berlin, Germany",
+      "description": "Creates visually appealing and user-friendly interfaces by designing layouts, typography, and color schemes that align with user needs and brand identity."
+    }
+  ]
+}

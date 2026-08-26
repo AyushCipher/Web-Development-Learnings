@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        .container {
+            max-width: 300px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .button-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 11px;
+            margin-top: 10px;
+        }
+        button {
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn-add { background-color: lightgreen; }
+        .btn-sub { background-color: lightcoral; }
+        .btn-mul { background-color: lightblue; }
+        .btn-div { background-color: lightgoldenrodyellow; }
+        .btn-pow { background-color: lightsalmon; }
+        .btn-sqrt { background-color: lightgray; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Simple Calculator</h2>
+        <input type="number" id="num1" placeholder="Enter first number">
+        <input type="number" id="num2" placeholder="Enter second number">
+        <div class="button-container">
+            <button class="btn-add" onclick="calculate('add')">Add</button>
+            <button class="btn-sub" onclick="calculate('sub')">Subtract</button>
+            <button class="btn-mul" onclick="calculate('mul')">Multiply</button>
+            <button class="btn-div" onclick="calculate('div')">Divide</button>
+            <button class="btn-pow" onclick="calculate('pow')">Power</button>
+            <button class="btn-sqrt" onclick="calculate('sqrt')">Square Root</button>
+        </div>
+        <h3>Result: <span id="result">0</span></h3>
+    </div>
+    
+    <script>
+        function calculate(operation) {
+            let num1 = parseFloat(document.getElementById('num1').value);
+            let num2 = parseFloat(document.getElementById('num2').value);
+            let result = 0;
+
+            if (operation !== 'sqrt' && (isNaN(num1) || isNaN(num2))) {
+                alert("Please enter valid numbers");
+                return;
+            }
+
+            switch (operation) {
+                case 'add': result = num1 + num2; break;
+                case 'sub': result = num1 - num2; break;
+                case 'mul': result = num1 * num2; break;
+                case 'div': 
+                    if (num2 === 0) {
+                        alert("Cannot divide by zero");
+                        return;
+                    }
+                    result = num1 / num2; 
+                    break;
+                case 'pow': result = Math.pow(num1, num2); break;
+                case 'sqrt': 
+                    if (isNaN(num1)) {
+                        alert("Please enter a valid number in the first field for square root");
+                        return;
+                    }
+                    if (num1 < 0) {
+                        alert("Cannot find the square root of a negative number");
+                        return;
+                    }
+                    result = Math.sqrt(num1);
+                    break;
+            }
+            document.getElementById('result').innerText = result;
+        }
+    </script>
+</body>
+</html>

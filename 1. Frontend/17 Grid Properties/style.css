@@ -1,0 +1,63 @@
+.container{
+    border: 1px solid brown;
+    background-color: yellow;
+    height: 700px;
+    width: 600px;
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px;
+    /* grid-gap:10px; */
+
+    /* Exactly same as in Flexbox(works with aligning the items in main asis[horizontally]) */
+    /* Works in parent container */
+
+    /* justify-content: start; --> Sara content horizontally left ma shift ho jyega
+    justify-content: end; ---> Sara content horizontally right ma shift ho jyega
+    justify-content: center; ---> Sara content horizontally center ma shift ho jyega
+    justify-content: space-between; ---> Sara content horizontally place ho jyega with equal spaces between them with left&right most boxes sticked at extreme left and right border
+    justify-content: space-around; ---> Sara content horizontally place ho jyega with equal spaces in between but left&right most boxes have unequal spaces from the border
+    justify-content: space-evenly; ---> Sara content horizontally place ho jyega with equal spaces in between as well as left&right most boxes have equal spaces with the border */
+
+    /* Align Items works with aligining/arranging the items inside grid in cross axis[vertically] */
+    /* Works in parent container */
+
+    /* align-items: start; ---> Sara content grid k block k top ma place ho jyega
+    align-items: end; ---> Sara content grid k block k bottom ma place ho jyega
+    align-items: baseline; ---> Content k according baseline function krta ha mtlb content ko baseline mante hue items align hoti ha
+    align-items: stretch;  ---> Content pura grid k block/cell ka size le lega */
+
+    /* Align-content works with the rows spaces between the items and behaves just like Flexbox in cross axis[vertically]*/
+
+    /* align-content: space-between;
+    align-content: space-around;
+    align-content: space-evenly;  */
+
+    place-content:center; /* Shorthand notation to place all the items/boxes/content in the middle of the conatiner 
+    else we have to use justify-content:center and align-content:center */
+
+    place-items: center; /* Shorthand notation to place all the items/boxes/content in the middle of the conatiner 
+    else we have to use justify-items:center and align-items:center */
+}
+.box{
+    border: 1px solid red;
+    background-color: aqua;
+}
+
+/* Justify-self Works in particular child/items of the container( to modify a single child)*/
+#box1{
+    /* Self usually determines ki parent/container ka jo child ha uska content jo hoga wo kis hisab se align/place hoga */
+
+    /* justify-self: start; ---> Box1 ko horizontally squeeze kr dega left side k traf content k hisab se
+    justify-self: end; ---> Box1 ko horizontally squeeze kr dega right side k traf content k hisab se
+    justify-self: center; --> Box1 ko horizonally squeeze kr dega center k traf */
+
+    /* align-self: start; ---> Box1 ko vertically squeeze kr dega content k hisab se left side k traf
+    align-self: end; --->Box1 ko vertically squeeze kr dega content k hisab se right side k traf
+    align-self: center; --> Box1 ko vertically squeeze kr dega content k hisab se center k traf  */
+    align-self: center;
+}
+
+/* Q. What's the difference between content,items and self attributes?
+Ans- Consider justify-content: start;---> it works only to change the postion of all the boxes to left side or it works for the parent container.
+whereas justify-items:start; when it is used then the box is adjusted to the left side according to the content or it works with the child items.
+and justify-self: start is used to bring changes changes specific to a particular boxor it works according to the content inside the child item. */

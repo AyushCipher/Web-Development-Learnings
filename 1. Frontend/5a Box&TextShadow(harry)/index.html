@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box and Text Shadow</title>
+    <style>
+        .container{
+            display: flex;
+            /* If we do for one card/box:-
+            height: 650px;
+            justify-content: center;--->from this the box appears at the top centre
+            align-content: center; ---> from this ,the box appears at centre of page*/
+        }
+        .card{
+            padding: 23px 12px;
+            margin: 23px 12px;
+            border: 2px solid red;
+            background-color: pink;
+            box-shadow: 5px 5px 5px yellow;
+            /* box-shadow: -5px -5px -5px yellow;---> Do this for creating shadow upward and ledtward */
+            box-shadow: 5px 5px 5px 10px yellow;
+            /* (horizintal,vertical,blur radius,spread radius,) */
+            box-shadow: 5px 5px 5px rgba(34,184,5,5);
+            /* (a--> alpha;it is responsible for darkness/lightness of chosen color) */
+            box-shadow: inset 5px 5px yellow;
+            /* inset--> shadow ko andr ki traf badha deta ha */
+            box-shadow: 5px 5px 5px  yellow, 5px 4px aqua;
+            /* for multiple colour shadowing */
+        }
+        .card h2{
+            text-shadow: 3px 4px  orange;
+            text-shadow: 3px 4px 5px white;
+           /* box-shadow: -5px -5px -5px yellow;---> Do this for creating shadow upward and ledtward */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card" id="card-1">
+            <h2>Card1</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium dolores officia maxime architecto? Qui, molestias. Quis architecto dolorum ratione repudiandae reiciendis amet at natus eaque numquam fuga eos iure corrupti, quaerat omnis dolorem recusandae!</p>
+        </div>
+        <div class="card" id="card-2">
+            <h2>Card2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus optio doloremque, similique sequi tempore animi voluptate ducimus molestias! Distinctio soluta tempora neque non, esse cupiditate quaerat veritatis perspiciatis doloremque voluptates, sequi nihil et iste!</p>
+        </div>
+        <div class="card" id="card-3">
+            <h2>Card3</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit eius ducimus voluptas dicta voluptates tempora maiores ea consequatur optio culpa, exercitationem praesentium. Qui porro ab aut nulla numquam iure animi explicabo repellendus sequi sint!</p>
+        </div>
+    </div>
+</body>
+</html>

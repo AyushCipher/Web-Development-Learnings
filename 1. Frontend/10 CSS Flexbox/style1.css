@@ -1,0 +1,47 @@
+.container{
+    height:400px;
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    /* Align content is used to work with spaces between the flex-items/ row items(elements/boxes) */
+    align-content: flex-start; /* Row items are shifted to top */
+    align-content: flex-end; /* Row items are shifted to bottom */
+    align-content: center;  /* Row items are shifted to the center */
+    align-content: space-between; /* Ek row top pe jyegi aur dusri row bottom pe */
+    align-content: space-around;  /* Creates space in between rows but upper&down most item rows do not have equal space with border */
+    align-content: space-evenly; /* Creates even spaces in between all rows */
+}
+.box{
+    border: 1px solid brown;
+    background-color: aqua;
+
+    flex-basis: 100px; /*Used to increase the width of element, works same as width attribute(just an alternative to width) 
+    It makes website more responsive*/
+    width:100px;
+    /* Diff between them is: width se overflow wla content hide ho jta ha , flex basis se sra content show hota h.
+    If we display a large content on one box(say box1),
+    then by using flex-basis whole part of content would be displayed inside the box,
+    but if we use width then a part of it only gets diplsayed depending upon size mentioned.
+
+    /* flex-grow: 1; --> All boxes/elements grow with an equal size horizontally*/ 
+}
+#box1{
+    order: 1;
+    /* flex-grow: 1; ---> Only the box within which this tag is used grows */
+    
+    flex-shrink: 4; /*  The one box for which this attribute is used shrinks faster as comparative to other boxes 
+    when viewport is shrinked or it's size is decreased.
+    meaning-Shrink speed increases*/
+}
+#box3{
+    order: 8;
+    /* flex-shrink:3; */
+    align-self: flex-end;
+}
+#box2{
+    order: 8;
+    align-self:stretch;
+}

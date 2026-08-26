@@ -1,0 +1,31 @@
+# This repo is meant to hold only "1. Frontend" and "2. Backend" - keep
+# "3. Main Projects" out of tracking/pushes entirely.
+3. Main Projects/
+
+# Dependencies
+node_modules/
+
+# Environment files (never commit real secrets)
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Build output
+dist/
+build/
+.next/
+out/
+
+# Logs
+*.log
+npm-debug.log*
+combined.log
+error.log
+
+# OS/editor cruft
+.DS_Store
+Thumbs.db
+
+# Third-party paid/copyrighted course material - not ours to redistribute
+2. Backend/21. Agentic AI/Advanced Backend + AI Full Course .pdf

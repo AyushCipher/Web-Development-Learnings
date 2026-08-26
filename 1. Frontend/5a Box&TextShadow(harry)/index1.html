@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box and Text Shadow</title>
+    <style>
+        /* Creating a root in order to maintain/change any property(color,height,width..etc)
+        so that change in one place can be reflected in all others */
+        :root{
+            --primary-color: brown;
+            --custom-width: 330px;
+        }
+        .container{
+            background-color: beige;
+            display: flex;
+            height: 650px;
+            border: 2px solid black;
+            justify-content: center;  /*--> using this tag, box is positioned to top centre */
+            align-items: center;   /*--> using this tag, box is positioned to centre of page */
+        }
+        .card{
+            height: 330px;
+            width: var(--custom-width);
+            padding: 5px;
+            margin: 5px;
+            background-color: aquamarine;
+            border: 2px solid var(--primary-color);
+            box-shadow: -14px -5px 6px var(--primary-color);
+        }
+        .card h2{
+            text-shadow: 3px 4px  orange;
+            text-shadow: 3px 4px 5px white;
+           /* box-shadow: -5px -5px -5px yellow;---> Do this for creating shadow upward and ledtward */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card" id="card-1">
+            <img src="https://www.codehelp.in/_next/image?url=%2Fassets%2FCommon%2FWhitelogoGIF.gif&w=640&q=75"
+            width="350px" height="150px">
+            <h2>>Welcome to our website!</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium dolores officia maxime architecto? Qui, molestias. Quis architecto dolorum ratione repudiandae reiciendis amet at natus eaque numquam fuga eos iure corrupti, quaerat omnis dolorem recusandae!</p>
+        </div>
+    </div>
+</body>
+</html>

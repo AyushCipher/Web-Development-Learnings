@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+/* Tailwind v4: opt into class-based dark mode (instead of the OS
+   prefers-color-scheme default) so ThemeContext can flip it manually
+   by toggling the `dark` class on <html>. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}

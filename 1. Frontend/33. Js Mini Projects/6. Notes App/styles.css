@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom right, #d9a7c7, #fffcdc);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.container {
+  margin-top: 40px;
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+}
+
+h1 {
+  color: #fff;
+  font-size: 2.5rem;
+}
+
+#createBtn {
+  margin: 20px 0;
+  padding: 10px 20px;
+  background-color: #8e44ad;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#createBtn:hover {
+  background-color: #732d91;
+}
+
+.note {
+  background-color: white;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.note textarea {
+  width: 100%;
+  resize: none;
+  font-size: 16px;
+  font-family: inherit;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+
+.deleteBtn {
+  position: absolute;
+  bottom: 10px;
+  right: 25px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: gray;
+}
+
+.deleteBtn:hover {
+  color: red;
+}

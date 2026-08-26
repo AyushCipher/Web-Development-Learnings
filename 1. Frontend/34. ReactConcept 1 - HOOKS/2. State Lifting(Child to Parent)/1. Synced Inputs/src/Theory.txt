@@ -1,0 +1,36 @@
+🧠 What is State Lifting?
+
+State Lifting is a pattern in React where the state is moved (lifted) from a child component up to their common parent so that:
+* The parent can manage the state centrally.
+* It can share the necessary state and handlers (via props) to other child components that need it.
+
+
+
+Q. Why Do We Need State Lifting?
+
+Let’s say:
+Child A needs to send some data to Child B (e.g., filtering, selection, updates).
+React components can only pass data downward (parent → child via props).
+
+To let two siblings communicate, we lift the shared state to their common parent.
+That way, Parent handles the data and passes it to both children.
+
+* Breakdown of the Diagram You Shared
+* Parent Component:
+*  Holds the state (useState).
+
+🔁 Can create, manage, and change the state.
+
+⬇️ Passes data down to children as props.
+
+🟠 Child A:
+Receives data and callback (e.g. onChange) from Parent.
+
+Can trigger changes in Parent’s state (by calling props.onChange()).
+
+Does not manage state directly (cross marked in orange ❌).
+
+🟠 Child B:
+Also receives data from Parent as props.
+
+Reacts to the updated data automatically when Parent’s state changes.

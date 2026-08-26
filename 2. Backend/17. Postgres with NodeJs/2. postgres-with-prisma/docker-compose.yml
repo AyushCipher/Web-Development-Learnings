@@ -1,0 +1,64 @@
+version: '3.8'
+
+services:
+  database:
+    image: postgres:15
+    container_name: postgres_prisma_db
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Ayush@2004
+      POSTGRES_DB: prisma-with-postgres
+    ports:
+      # If a Postgres server is already running natively on this machine
+      # (port 5432), this bind will fail - either stop that one first or
+      # remap this to e.g. "5433:5432" and update DATABASE_URL below to match.
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  app:
+    build: .
+    container_name: express_prisma_api
+    depends_on:
+      - database
+    environment:
+      # Password is percent-encoded (@ -> %40) since it's embedded inside a
+      # connection URI here, unlike POSTGRES_PASSWORD above which is a plain value.
+      - DATABASE_URL=postgresql://postgres:Ayush%402004@database:5432/prisma-with-postgres?schema=public
+    ports:
+      - "3003:3000"
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    command: [ "sh", "-c", "npx prisma generate && node src/server.js" ]
+
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: prometheus_prisma
+    restart: always
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    ports:
+      - "9090:9090"
+    command:
+      - --config.file=/etc/prometheus/prometheus.yml
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: prisma_grafana
+    restart: always
+    ports:
+      - "3000:3000"
+    volumes:
+      - grafana_data:/var/lib/grafana
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_USERS_ALLOW_SIGN_UP=false
+    depends_on:
+      - prometheus
+
+volumes:
+  postgres_data:
+  grafana_data:

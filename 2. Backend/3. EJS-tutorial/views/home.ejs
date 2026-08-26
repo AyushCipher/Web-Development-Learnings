@@ -1,0 +1,24 @@
+<%#
+  EJS tag cheat-sheet (kept inside an EJS comment tag, not an HTML one,
+  because EJS scans the whole file for its delimiters regardless of HTML
+  structure - writing the actual delimiter characters here would truncate
+  this comment early, so they're spelled out in words below instead):
+  - "dash" tag: outputs raw/unescaped HTML - used for include() below so the
+    partial's own HTML tags render as tags, not escaped text.
+  - "equals" tag: outputs a value HTML-escaped - the safe default for any
+    data that might contain user input, to prevent XSS.
+  - plain tag (no dash or equals): runs plain JS with no output - used below
+    for the forEach loop itself (the li line still needs its own "equals"
+    tag to actually print each product's title).
+%>
+<%- include('components/header.ejs') %>
+<h1><%= title %></h1>
+<h2>Welcome to homepage</h2>
+<label>List of products</label>
+
+<ul>
+  <% products.forEach(product=>{ %>
+  <li><%= product.title %></li>
+  <% }) %>
+</ul>
+<%- include('components/footer.ejs') %>

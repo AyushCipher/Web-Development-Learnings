@@ -1,0 +1,57 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing:border-box;
+}
+.container{
+    border: 1px solid brown;
+    background-color: yellow;
+    height: 700px;
+    width: 504px;
+    display: grid;
+    grid-template-columns: 100px 400px;
+    grid-template-rows: 30px 1fr 30px;
+    
+    grid-gap:4px;
+    grid-template-areas:
+    "hd hd"
+    "side main"
+    "ft ft";
+}
+.box{
+    border: 1px solid red;
+    background-color: aqua;
+}
+#header{
+    grid-area:hd;
+}
+#sidebar{
+    grid-area:side;
+}
+#content{
+    grid-area:main;
+}
+#footer{
+    grid-area:ft;
+}
+/* Media Queries are used to set different css style rules for different devices or sized screens. */
+
+/* We can do multiple breakdowns for medium screens such as:- */
+/* @media(max-width: 400px) and (max-width:900px){
+    .container{
+        grid-gap:100px;
+    }
+} */
+/* Width agr 350 px se kam hoga tb below properties purane properties se update ho jyega */
+@media(max-width: 350px){
+    .container{
+        grid-template-rows: 30px 1fr 1fr 43px;
+        grid-template-columns: 1fr;
+        grid-gap:2px;
+        grid-template-areas:
+        "hd "
+        "side"
+        "main"
+        "ft";
+    }
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Counter App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background: #f0f0f0;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        #counter {
+            font-size: 60px;
+            margin: 20px 0;
+            color: #333;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 5px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            color: white;
+        }
+
+        .increase { background-color: #28a745; }
+        .decrease { background-color: #dc3545; }
+        .reset { background-color: #007bff; }
+    </style>
+</head>
+<body>
+
+    <h1> Counter App</h1>
+    <div id="counter">0</div>
+
+    <button class="decrease" onclick="decrease()"> Decrease</button>
+    <button class="reset" onclick="reset()">Reset</button>
+    <button class="increase" onclick="increase()">Increase</button>
+
+    <script>
+        let count = 0;
+        const counterElement = document.getElementById("counter");
+
+        function updateDisplay() {
+            counterElement.textContent = count;
+        }
+
+        function increase() {
+            count++;
+            updateDisplay();
+        }
+
+        function decrease() {
+            count--;
+            updateDisplay();
+        }
+
+        function reset() {
+            count = 0;
+            updateDisplay();
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,164 @@
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 21:52:46"}
+{"duration":"9ms","ip":"::1","level":"warn","message":"Client Error","method":"GET","path":"/api/health","service":"express-extended-api","status":404,"timestamp":"2026-05-30 21:53:17","userAgent":"Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.8457"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 21:53:39"}
+{"duration":"14ms","ip":"::1","level":"info","message":"Request","method":"GET","path":"/api/health","service":"express-extended-api","status":200,"timestamp":"2026-05-30 21:54:28","userAgent":"Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.8457"}
+{"duration":"2ms","ip":"::1","level":"info","message":"Request","method":"GET","path":"/items","service":"express-extended-api","status":200,"timestamp":"2026-05-30 21:54:36","userAgent":"Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.8457"}
+{"ip":"::1","level":"warn","message":"404 Not Found","method":"GET","path":"/api/v1/nonexistent","service":"express-extended-api","timestamp":"2026-05-30 21:54:43"}
+{"duration":"2ms","ip":"::1","level":"warn","message":"Client Error","method":"GET","path":"/api/v1/nonexistent","service":"express-extended-api","status":404,"timestamp":"2026-05-30 21:54:43","userAgent":"Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.8457"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 21:56:28"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 21:58:14"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 21:58:17"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 21:58:19"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 21:58:21"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 21:58:29"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 21:59:15"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 21:59:21"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 21:59:27"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 21:59:36"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 21:59:38"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 21:59:42"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 21:59:51"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 21:59:58"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:00:04"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:00:07"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:00:16"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:00:20"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:00:24"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:00:32"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:00:34"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:00:44"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:00:50"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:00:52"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:01:01"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:01:07"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:01:14"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:01:15"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:01:18"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:01:22"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:01:28"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:01:32"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:01:38"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:01:42"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:01:48"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:01:51"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:03:08"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:03:14"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:03:28"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:03:34"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:03:41"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:03:47"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:04:02"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:04:06"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:04:22"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:04:24"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:04:27"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:04:34"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:04:46"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:04:56"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:04:59"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:05:03"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:05:08"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:05:11"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:05:14"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:05:17"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:05:19"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:06:13"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:06:16"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:06:19"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:06:28"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:06:32"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:06:43"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:06:52"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:07:01"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:07:03"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:07:09"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:07:11"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:07:19"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:07:26"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:07:32"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:07:34"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:07:37"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:07:39"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:07:50"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:07:55"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:07:58"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:08:00"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:08:03"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:08:07"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:08:13"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:10:20"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:10:23"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:10:36"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:10:44"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:10:53"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:10:57"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:10:59"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:11:05"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:11:10"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:11:16"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:11:21"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:11:28"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:11:30"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:11:38"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:11:41"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:11:44"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:11:51"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:11:55"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:11:58"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:12:01"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:12:03"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:12:04"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:12:16"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:12:18"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:12:22"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:12:25"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:12:29"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:12:31"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:12:32"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:12:34"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:12:38"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:12:39"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:12:49"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:12:50"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:12:53"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:12:58"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:13:04"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:13:11"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:13:26"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:13:35"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:13:38"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:13:41"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:13:46"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:13:51"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:13:54"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:14:03"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:14:05"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:14:08"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:14:09"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:14:12"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:14:20"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:14:21"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-05-30 22:41:26"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-08-22 11:52:09"}
+{"duration":"12ms","ip":"::1","level":"warn","message":"Client Error","method":"POST","path":"/auth/register","service":"express-extended-api","status":404,"timestamp":"2026-08-22 11:52:23","userAgent":"curl/8.21.0"}
+{"environment":"development","level":"info","message":"Express Server started","port":"3000","serverId":"Server-1","service":"express-extended-api","timestamp":"2026-08-22 11:54:04"}
+{"email":"ayush.reg@example.com","ip":"::1","level":"info","message":"User registration attempt","service":"express-extended-api","timestamp":"2026-08-22 11:54:15","username":"ayushv"}
+{"email":"ayush.reg@example.com","level":"info","message":"User registered successfully","service":"express-extended-api","timestamp":"2026-08-22 11:54:15","username":"ayushv"}
+{"duration":"126ms","ip":"::1","level":"info","message":"Request","method":"POST","path":"/auth/register","service":"express-extended-api","status":201,"timestamp":"2026-08-22 11:54:15","userAgent":"curl/8.21.0"}
+{"email":"ayush.reg@example.com","ip":"::1","level":"info","message":"Login attempt","service":"express-extended-api","timestamp":"2026-08-22 11:54:27","userAgent":"curl/8.21.0"}
+{"email":"ayush.reg@example.com","ip":"::1","level":"info","message":"User logged in","service":"express-extended-api","timestamp":"2026-08-22 11:54:27"}
+{"duration":"90ms","ip":"::1","level":"info","message":"Request","method":"POST","path":"/auth/login","service":"express-extended-api","status":200,"timestamp":"2026-08-22 11:54:27","userAgent":"curl/8.21.0"}
+{"email":"ayush.reg@example.com","ip":"::1","level":"info","message":"Login attempt","service":"express-extended-api","timestamp":"2026-08-22 11:54:27","userAgent":"curl/8.21.0"}
+{"duration":"83ms","ip":"::1","level":"warn","message":"Client Error","method":"POST","path":"/auth/login","service":"express-extended-api","status":401,"timestamp":"2026-08-22 11:54:27","userAgent":"curl/8.21.0"}
+{"category":"electronics","level":"info","message":"Item creation request","price":25.99,"service":"express-extended-api","timestamp":"2026-08-22 11:54:27","title":"Wireless Mouse","userId":"anonymous"}
+{"category":"electronics","id":"6a89409bdbe4505575bcb907","level":"info","message":"Item created","service":"express-extended-api","timestamp":"2026-08-22 11:54:27","title":"Wireless Mouse"}
+{"duration":"10ms","ip":"::1","level":"info","message":"Request","method":"POST","path":"/products","service":"express-extended-api","status":201,"timestamp":"2026-08-22 11:54:27","userAgent":"curl/8.21.0"}
+{"level":"info","limit":10,"message":"Items list requested","page":1,"service":"express-extended-api","sort":"newest","timestamp":"2026-08-22 11:54:40","userId":"anonymous"}
+{"duration":"39ms","ip":"::1","level":"info","message":"Request","method":"GET","path":"/products","service":"express-extended-api","status":200,"timestamp":"2026-08-22 11:54:40","userAgent":"curl/8.21.0"}
+{"itemId":"6a89409bdbe4505575bcb907","level":"debug","message":"Item detail requested","service":"express-extended-api","timestamp":"2026-08-22 11:54:41","userId":"anonymous"}
+{"duration":"7ms","ip":"::1","level":"info","message":"Request","method":"GET","path":"/products/6a89409bdbe4505575bcb907","service":"express-extended-api","status":200,"timestamp":"2026-08-22 11:54:41","userAgent":"curl/8.21.0"}
+{"itemId":"000000000000000000000000","level":"debug","message":"Item detail requested","service":"express-extended-api","timestamp":"2026-08-22 11:54:41","userId":"anonymous"}
+{"duration":"3ms","ip":"::1","level":"warn","message":"Client Error","method":"GET","path":"/products/000000000000000000000000","service":"express-extended-api","status":404,"timestamp":"2026-08-22 11:54:41","userAgent":"curl/8.21.0"}
+{"itemId":"6a89409bdbe4505575bcb907","level":"info","message":"Item deletion requested","service":"express-extended-api","timestamp":"2026-08-22 11:54:41"}
+{"itemId":"6a89409bdbe4505575bcb907","level":"info","message":"Item deleted","service":"express-extended-api","timestamp":"2026-08-22 11:54:41"}
+{"duration":"7ms","ip":"::1","level":"info","message":"Request","method":"DELETE","path":"/products/6a89409bdbe4505575bcb907","service":"express-extended-api","status":200,"timestamp":"2026-08-22 11:54:41","userAgent":"curl/8.21.0"}

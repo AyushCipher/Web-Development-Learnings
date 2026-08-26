@@ -1,0 +1,27 @@
+.container{
+    height: 700px;
+    border: 1px solid red;
+    background-color: yellow;
+
+    display: grid;
+    grid-gap:10px;
+
+    /* Agr hume kisi row ka kitna length setup krna ha wo ni pta ya usma kitna content jyega wo ni pta initially,
+    toh below property ka use kr skte h [min, max length(auto- depends on the size of unknown content)] setup krne k liye 
+    agr initianlly max k size se jyada content enter kiya to vo overflow ho jyega*/
+
+    /* Jb unknown no of rows hoti ha tb ise use krte ha */
+    grid-auto-rows: minmax(100px, auto);
+    /* [min size of row,max size of row] */
+
+    /* Ya to grid-auto-rows ka use kro ya to grid-template-rows 
+    grid-template-rows ko define krne se agr uske capacity se jyada rows enter kroge 
+    toh niche new rows attach honge pr unka size squeeze ho jyega */
+    grid-template-columns: repeat(4,1fr);
+}
+.box{
+    border: 1px solid green;
+    background-color: aqua;
+    /* height: 100px;
+    width: 100px; */
+}

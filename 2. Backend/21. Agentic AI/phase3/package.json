@@ -1,0 +1,25 @@
+{
+  "name": "phase3-mcp",
+  "version": "1.0.0",
+  "description": "Phase 3: Model Context Protocol (MCP) - a standardized way to expose tools to any LLM/agent, wired into the same LangGraph agent from phase 1",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@langchain/core": "^1.1.49",
+    "@langchain/groq": "^1.2.1",
+    "@langchain/langgraph": "^1.4.2",
+    "@langchain/mcp-adapters": "^1.1.4",
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "nodemon": "^3.1.14",
+    "zod": "^3.24.1"
+  }
+}

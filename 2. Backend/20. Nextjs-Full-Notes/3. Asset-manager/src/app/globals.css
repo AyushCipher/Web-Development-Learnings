@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 33% 98%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 174 72% 32%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 218 36% 95%;
+    --secondary-foreground: 222 47% 11%;
+    --muted: 214 32% 92%;
+    --muted-foreground: 215 16% 42%;
+    --accent: 24 95% 88%;
+    --accent-foreground: 24 75% 22%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 214 32% 86%;
+    --input: 214 32% 86%;
+    --ring: 174 72% 32%;
+    --chart-1: 174 72% 32%;
+    --chart-2: 231 48% 52%;
+    --chart-3: 24 82% 56%;
+    --chart-4: 344 64% 56%;
+    --chart-5: 198 76% 42%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 222 47% 7%;
+    --foreground: 210 40% 98%;
+    --card: 222 42% 10%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222 42% 10%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 174 67% 47%;
+    --primary-foreground: 222 47% 8%;
+    --secondary: 221 32% 16%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 221 28% 18%;
+    --muted-foreground: 215 20% 70%;
+    --accent: 24 84% 24%;
+    --accent-foreground: 30 92% 88%;
+    --destructive: 0 63% 42%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 27% 21%;
+    --input: 220 27% 21%;
+    --ring: 174 67% 47%;
+    --chart-1: 174 67% 47%;
+    --chart-2: 231 70% 68%;
+    --chart-3: 30 90% 60%;
+    --chart-4: 344 74% 65%;
+    --chart-5: 198 88% 59%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    background-image:
+      linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--secondary) / 0.45) 100%);
+    letter-spacing: 0;
+  }
+
+  ::selection {
+    @apply bg-primary text-primary-foreground;
+  }
+}
+
+@layer components {
+  .page-shell {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .panel {
+    @apply border bg-card text-card-foreground shadow-sm;
+  }
+}

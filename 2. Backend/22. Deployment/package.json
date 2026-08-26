@@ -1,0 +1,18 @@
+{
+  "name": "deployment-ec2-demo",
+  "version": "1.0.0",
+  "description": "Deploying a Node/Express app to AWS EC2 with Docker and a GitHub Actions SSH-deploy workflow",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node --watch index.js",
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1"
+  }
+}

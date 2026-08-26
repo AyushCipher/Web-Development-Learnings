@@ -1,0 +1,23 @@
+div{
+    height: 100px;
+    width: 100px;
+    background-color: aqua;
+    border: 1px solid black;
+}
+.translated{
+    transform: perspective(15px) translateZ(-10px);
+    /* Third axis pe kam krne k liye perspective ko on/active krna padega
+    #perspective: distance between eyes and browser ka display
+                            OR
+    z=0 wla plane se le kr mujh tk jo distance ha usko perspective bolte ha */
+}
+.scaled{
+    margin-left: 200px;
+    transform: perspective(350px) scaleZ(4) rotateX(35deg) rotateY(35deg);
+    /* sirf perspective k sth scale use krne se koi effect ni dikhega kuki hmara viewpoint sirf wo box hi ha 
+       agr hm usko rotate krenge to uske piche hone wla scale ko dekhne pyenge.
+       
+       Q. Why do rotateZ work without usage of perspective, while otherproperties like scale and translate require it?
+       Ans- Since this is essentially a 2D rotation within the plane of the screen, the concept of depth or perspective doesn't apply.
+       The rotation doesn't change the distance of any part of the element from the viewer; it merely spins the element around its center point on the screen. */
+}

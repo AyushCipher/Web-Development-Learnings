@@ -1,0 +1,3 @@
+NOT DONE: From mediaId, we need to get the url and that we will be getting from media database
+DONE: When deleting a post we need to delete post from post service also and also media from media service to delete it from cloudinary as well 
+NOT DONE:  Add more services like feedback service, like and comment service and more that we can think of

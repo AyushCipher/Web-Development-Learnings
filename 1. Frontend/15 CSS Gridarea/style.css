@@ -1,0 +1,31 @@
+.container{
+    height: 700px;
+    border: 1px solid black;
+    background-color: yellow;
+
+    display: grid;
+    /* Grid k rows aur columns to create krne k liye ye attributes use krne hai */
+    grid-template-rows: repeat(4,1fr);
+    grid-template-columns: repeat(3,1fr);
+    /* Each row will have a height of 1fr, which means each row will take an equal share of the available space in the container. */
+    grid-gap: 10px;
+}
+.box{ 
+    border: 1px solid green;
+    background-color: aqua;
+    /* height: 100px;
+    width: 100px; */
+}
+#box1{
+    /* These lines will only work when height and width is not defined initially */
+    /* To extend one box rowwise and columnwise we need to write 4 lines of code , 
+    but same can be done with grid area as a shorthand notation */
+
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+
+    grid-area: 1/1/3/4;
+    /* (rowstart,colstart,rowend,colend); */
+}

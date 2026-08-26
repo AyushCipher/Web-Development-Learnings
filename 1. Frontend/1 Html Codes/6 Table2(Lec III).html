@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework Table</title>
+    <style>
+        table,td,tr,th{
+            border:1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        
+        <colgroup>
+            <!-- If we dont want to color the first column then we just write this attribute -->
+            <col span="1" > 
+            <col span="2" style="background-color:greenyellow">
+            <col span="1" style="background-color: red">
+            <!-- To hide one of the colums we use below attribute -->
+            <col span="1" style="visibility: collapse;">
+        </colgroup>
+
+       <tr>
+            <td rowspan=2>State of Health</td>
+            <td colspan=2>Fasting Value</td>
+            <td>After Eating</td>
+            <td>Ayush</td>
+       </tr>
+       <tr>
+            <td>Minimum</td>
+            <td>Maximum</td>
+            <td>2 Hours after eating</td>
+            <td>Animesh</td>
+       </tr>
+       <tr>
+            <td>Healthy</td>
+            <td>70</td>
+            <td>100</td>
+            <td>Less than 140</td>
+            <td>Anish</td>
+       </tr>
+       <tr>
+            <td>Pre-Diabetes</td>
+            <td>101</td>
+            <td>126</td>
+            <td>140 to 200</td>
+            <td>Aman</td>
+        </tr>
+       <tr>
+            <td>Diabetes</td>
+            <td>More than 126</td>
+            <td>NA</td>
+            <td>More than 200</td>
+            <td>Ayushman</td>
+       </tr>
+    </table>
+</body>
+</html>

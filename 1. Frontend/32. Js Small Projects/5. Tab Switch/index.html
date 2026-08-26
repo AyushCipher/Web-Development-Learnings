@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Search & Tabs</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background-color: #f1f5f9;
+    }
+
+    .tabs {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .tab {
+      padding: 10px 20px;
+      background-color: #e2e8f0;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .tab.active {
+      background-color: #3b82f6;
+      color: white;
+    }
+
+    .search-box {
+      margin-bottom: 15px;
+    }
+
+    .search-box input {
+      padding: 8px 12px;
+      width: 100%;
+      max-width: 300px;
+      border: 1px solid #cbd5e1;
+      border-radius: 5px;
+    }
+
+    .content {
+      display: none;
+    }
+
+    .content.active {
+      display: block;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      background-color: white;
+      padding: 10px;
+      margin: 5px 0;
+      border-radius: 5px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="tabs">
+    <div class="tab active" data-tab="products">Products</div>
+    <div class="tab" data-tab="users">Users</div>
+    <div class="tab" data-tab="orders">Orders</div>
+  </div>
+
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search items..." />
+  </div>
+
+  <div id="products" class="content active">
+    <ul>
+      <li>iPhone</li>
+      <li>MacBook</li>
+      <li>iPad</li>
+      <li>AirPods</li>
+    </ul>
+  </div>
+
+  <div id="users" class="content">
+    <ul>
+      <li>John Doe</li>
+      <li>Jane Smith</li>
+      <li>Emily Johnson</li>
+      <li>Michael Brown</li>
+    </ul>
+  </div>
+
+  <div id="orders" class="content">
+    <ul>
+      <li>Order #1001</li>
+      <li>Order #1002</li>
+      <li>Order #1003</li>
+    </ul>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll(".tab");
+    const contents = document.querySelectorAll(".content");
+    const searchInput = document.getElementById("searchInput");
+
+    tabs.forEach(tab => {
+      tab.addEventListener("click", () => {
+        // Switch tabs
+        tabs.forEach(t => t.classList.remove("active"));
+        contents.forEach(c => c.classList.remove("active"));
+
+        tab.classList.add("active");
+        document.getElementById(tab.dataset.tab).classList.add("active");
+
+        // Clear search input
+        searchInput.value = "";
+        filterList(); // reset filtering
+      });
+    });
+
+    searchInput.addEventListener("input", filterList);
+
+    function filterList() {
+      const searchTerm = searchInput.value.toLowerCase();
+      const activeContent = document.querySelector(".content.active");
+      const items = activeContent.querySelectorAll("li");
+
+      items.forEach(item => {
+        const match = item.textContent.toLowerCase().includes(searchTerm);
+        item.style.display = match ? "block" : "none";
+      });
+    }
+  </script>
+</body>
+</html>

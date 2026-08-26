@@ -1,0 +1,29 @@
+{
+  "name": "postgress-with-drizzle",
+  "version": "1.0.0",
+  "description": "The same library-management API as 2. postgres-with-prisma, rebuilt on Drizzle ORM instead of Prisma - same routes, same JSON shapes, same business logic.",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:push": "drizzle-kit push",
+    "db:studio": "drizzle-kit studio"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "drizzle-orm": "^0.45.2",
+    "express": "^4.21.2",
+    "pg": "^8.13.3",
+    "prom-client": "^15.1.3"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.31.10",
+    "nodemon": "^3.1.9"
+  }
+}

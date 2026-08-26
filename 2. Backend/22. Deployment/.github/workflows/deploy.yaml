@@ -1,0 +1,36 @@
+# Q. WHAT DOES THIS WORKFLOW ACTUALLY DO, END TO END?
+# ANS: On every push to main, GitHub's own runner checks out this repo
+# (mostly so the workflow has something to run FROM - the real work
+# happens over SSH), then SSHes into your EC2 instance and re-pulls +
+# rebuilds there. The EC2 instance is the one doing `npm install`/
+# `docker build`, not GitHub's runner - this workflow is just the remote
+# trigger. See README.md in this folder for what needs to already exist on
+# the EC2 side (a clone of this repo, Docker + Compose installed) and in
+# this GitHub repo's Settings -> Secrets (SSH_HOST, SSH_KEY) before this
+# can succeed.
+name: deploy to ec2
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v6
+
+      - name: deploy via ssh
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ubuntu
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            cd ~/22.\ Deployment
+            git pull
+            sudo docker compose down
+            export GIT_COMMIT=$(git rev-parse --short HEAD)
+            sudo -E docker compose up -d --build

@@ -1,0 +1,34 @@
+.box{
+    background-color: aqua;
+    transform: translate(100px,250px);/* [Horizontal(x),Vertical(y)] */
+    /* Transform property results in movement of the content 
+      - - - - -    OR   - - - - -                  */
+    transform: translateX(100px);
+    transform: translateY(250px);
+}
+.mydiv{
+    background-color: pink;
+     transform: rotate(-45deg);/*(-ve--->Anticlockwise)*/
+}
+.ayush{
+    background-color: yellow;
+    margin: 200px;/*(Upon giving margin it appears in small size yellow block line) */
+    transform:scale(1,4); /*--->(Increase the text size) */
+    /*transform:scale(1.5,5);--->(Can use Decimal values too)
+    transform:scaleX(2);--->(Can increase only the X axis specifically)*/
+}
+.trans{
+    background-color: orange;
+    margin: 200px;
+    transform: skew(30deg);
+    /* Skew results in tilting of the box or content */
+}
+.mat{
+    background-color: rgb(165, 83, 163);
+    width:200px;
+    height:200px;
+    margin:200px;
+    /* The matrix() method combines all the 2D transform methods into one. */
+    transform: matrix(2,0,1,2,0,0);/*
+    The parameters are as follow: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY())*/                           
+}

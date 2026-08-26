@@ -1,0 +1,22 @@
+// This file tells the TypeScript compiler: 
+// * how to compile your code
+// * what rules to enforce
+// * where files are located
+
+{
+  "compilerOptions": {
+    "target": "es2022",
+    "module": "es2022",
+    "moduleResolution": "bundler",      
+    // Don’t resolve modules like Node.js does(Tries finding - ./utils.ts, ./utils.js, ./utils/index.ts) — assume a bundler (like Vite/Webpack) will handle imports.
+    
+    "strict": true,                         // Enables all strict type-checking rules like no implicit any, strict null checks, etc. to make code safer and bug-free
+    "noUncheckedIndexedAccess": true,       // Makes accessing array elements or object properties potentially undefined unless you check them first. Prevents runtime errors.
+    "exactOptionalPropertyTypes": true,     // Makes optional properties more strict
+    "useUnknownInCatchVariables": true,     // Makes catch variables of type unknown instead of any, forcing you to check their type before using them. Improves error handling safety.
+    "skipLibCheck": true,                   // Skips type checking of declaration files (.d.ts) to speed up compilation. Useful when using third-party libraries with complex types.
+    "rootDir": "src",
+    "outDir": "dist"
+  },
+  "include": ["src"]
+}

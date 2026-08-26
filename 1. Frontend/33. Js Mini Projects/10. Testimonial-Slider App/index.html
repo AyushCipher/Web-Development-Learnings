@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testimonial Slider</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Testimonial Slider</h1>
+    <div class="slider">
+      <div class="card active">
+        <img src="./images/model-3.jpg" alt="Person">
+        <h3>Lorem Ipsum</h3>
+        <b>San Francisco, USA</b>
+        <p>I’m a full-stack software engineer with a passion for crafting scalable web applications. From designing RESTful APIs and managing databases to building intuitive front-end interfaces, I enjoy solving problems across 
+        the entire stack.</p>
+      </div>
+
+      <div class="card">
+        <img src="./images/model-1.jpg" alt="Person">
+        <h3>Jane Doe</h3>
+        <b>Los Angeles, USA</b>
+        <p>I'm a software engineer specializing in machine learning and artificial intelligence. I build intelligent systems using Python, TensorFlow, and PyTorch, 
+            and I have experience deploying models into production using scalable cloud platforms. </p>
+      </div>
+
+      <div class="card">
+        <img src="./images/model-2.jpg" alt="Person">
+        <h3>John Doe</h3>
+        <b>California, USA</b>
+        <p>As a frontend engineer, I’m passionate about delivering beautiful and accessible user experiences. I specialize in React, TypeScript, and modern CSS frameworks like Tailwind. 
+        </p>
+      </div>
+
+      <div class="card">
+        <img src="./images/model-4.jpg" alt="Person">
+        <h3>Eric Doe</h3>
+        <b>New York, USA</b>
+        <p>I'm a backend software engineer focused on building reliable, secure, and high-performance server-side applications. I specialize in designing microservices and API-driven architectures using technologies like Java, Spring Boot, PostgreSQL, 
+            and Kubernetes.</p>
+      </div>
+
+      <div class="card">
+        <img src="./images/model-5.jpg" alt="Person">
+        <h3>Joseph Doe</h3>
+        <b>Washington DC, USA</b>
+        <p>I’m a software engineer with a DevOps mindset, bridging the gap between development and operations. I automate deployments, monitor system health, and ensure CI/CD pipelines run smoothly. 
+        </p>
+      </div>
+    </div>
+
+    <div class="dots">
+      <span class="dot active-dot" data-index="0"></span>
+      <span class="dot" data-index="1"></span>
+      <span class="dot" data-index="2"></span>
+      <span class="dot" data-index="3"></span>
+      <span class="dot" data-index="4"></span>
+    </div>
+
+    <button id="randomBtn">Show Random</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+/* App.css */
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+#container {
+  width: 350px;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px auto;
+  border: 2px solid black;
+  transition: all 0.3s ease-in-out;
+}
+
+.light-theme {
+  background-color: beige;
+  color: black;
+}
+
+.dark-theme {
+  background-color: black;
+  color: white;
+}

@@ -1,0 +1,37 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+.container{
+    background-color: brown;
+    height: 500px;
+    border: 3px solid black;
+    display: grid;
+    /* grid-template-columns: 200px 200px 210px; */
+
+    /* Upr wla property use krne se result responsive ni rhega ,i.e, phone ma ya laptop ma alg dikhai de skta ha,
+    isliye hm 1fr use krenge jo ki kisi bhi type ka viewport ko equal sizes ma baat deta ha */
+    /* grid-template-columns: 1fr 1fr 1fr; */
+
+    grid-template-columns: 100px repeat(3,1fr); /*--->First Col=100px, rest 3 cols=1fr 
+    same can be done wtih grid-template-rows */
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 90px 90px 90px 90px;
+    grid-template-rows: repeat(4,1fr); 
+    gap:15px;
+}
+.box{
+    background-color: aqua;
+    border: 3px solid black;
+    /* width: 80px; */
+    /* height: 80px; */
+}
+#box1{
+    grid-column-start: 1;
+    grid-column-end: 3; /* Comment out width */
+}
+#box3{
+    grid-row-start: 2;
+    grid-row-end: 4; /* Comment out height for having box 3 height and width till box 6 */
+}

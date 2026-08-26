@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    /* Class Selector Example: It is used when a group/part/section of tags are to be modified.*/
+        .green{
+            color: green;
+
+          /*font-family: 'Times New Roman', Times, serif;
+            font-style: italic;
+            
+            Main Difference between both is font-family you assign more than one font style. When the browser can't access it it reverts to the next font
+            while with the font-style you set only one font. If it fails to load the browser uses its default font */
+        }
+        .blue{
+            color: blue;
+        }
+
+    /* Element Selector Example: In this selector,we select a tag and do some changes that will reflect to every place it appears/is used in the page. */
+        h1{
+            background-color: aqua ;
+            color: blue;
+        }
+        h2{
+            background-color: yellowgreen ;
+            color: brown;
+        }
+
+    /* Id Selector Example: In this selector, we only select a particular/specific tag and modify it. */
+        #ayush{
+            color:blueviolet;
+        }
+        #first-button{
+            color:red;
+        }
+
+    /* Pseudo Class Selector: A CSS Pseudo-class is a keyword added to a selector that specifies a special state of the selected elements. */
+    /* unvisited link */
+        a:link {
+            color: #FF0000;
+        }
+
+    /* visited link */
+        a:visited {
+            color: #00FF00;
+        }
+
+    /* mouse over link */
+        a:hover {
+            color: #FF00FF;
+        }
+
+    /* selected link */
+        a:active {
+            color: #0000FF;
+        }
+
+    /* Multiple/Grouping Selector: It is used when more than one/multiple tags are to be modified in same way.*/
+        table,tr,td,th{
+            border: 1px solid black;
+            border-collapse:collapse;
+            text-align: center;
+            caption-side: top;
+
+        }
+    
+    </style>
+</head>
+<body> 
+    <p class="green">abcd</p>
+    <p class="green">pqrs</p>
+    <p class="blue">wxyz</p>
+
+    <h1>This is my Heading</h1>
+    <h2>This is my second heading</h2>
+
+    <p id="ayush">Ayush is a good boy.</p>
+    </br>
+    </br>
+
+    <button id="first-button">Submit</button>
+    </br>
+    </br>
+
+    <a href="https://codehelp.in">Hello DSA Supreme</a>
+    </br>
+    </br>
+
+    <table>
+        <caption>My First Salary</caption>
+        <tr>
+            <th >Month</th>
+            <th>Amount</th>
+            <th>abcd</th>
+        </tr>
+        <tr>
+            <td>January</td>
+            <td >300</td>
+            <td>abcd</td>
+        </tr>
+        <tr>
+            <td>February</td>
+            <td>200</td>
+            <td>pqr</td>
+        </tr>
+    </table>
+</body>
+</html>

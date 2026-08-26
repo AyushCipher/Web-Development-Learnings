@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 200px;
+            width: 200px;
+            border: 1px solid black;
+            background-color: orange;
+
+            /* Margin is the space between borders of two div/elements */
+            margin: 10px;
+            /* If we just want to increase/decrease margin size on a specific side then we can use margin-top,margin-bottom,margin-left,margin-right. */
+
+            /* Padding is the space between content and border ; 
+            If we use padding then size of box increases since there comes space 
+            between border and content of the box*/
+            padding: 23px;
+            /*If we just want to increase/decrease padding size on a specific side then we can use padding-top,padding-bottom,padding-left,padding-right. */
+            
+            /* by applying box sizing along with padding size of box remains same, but size of content decreases(becz of padding)
+            eg:- in this case box size would be till border */
+            box-sizing: border-box;   
+            
+        }
+        #org{
+            background-color: rgb(196, 141, 38);
+            /* Above color is rbg color type of css where r->red, g->green ,b->blue 
+            Each parameter (Red,Green,Blue) defines the intensity of the color and can be any integer between 0 and 255 
+            or a percentage value (from 0% to 100%)*/
+        }
+        #wht{
+            background-color:#838065;
+            /*Above color is hexadecimal color which is specified with: #RRGGBB, where the RR(red), GG(green) ,and BB(blue) hexadecimal integers specify the components of the color.
+            All values must be between 00 and FF. */
+        }
+        #grn{
+            background-color: green;
+            /* It is a predefined color. A total of 140 colors are predefined in HTML and CSS */
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <div class="box" id="org">A</div>
+    <div class="box" id="wht">B</div>
+    <div class="box" id="grn">C</div>
+</body>
+</html>

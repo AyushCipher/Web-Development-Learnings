@@ -1,0 +1,94 @@
+.notes-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem; 
+    padding: 2rem;
+  }
+  
+  .note-card {
+    display: flex;
+    margin-bottom: 1rem; /* Added margin for additional spacing */
+  }
+  
+  .note-card-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 150px;
+    background-color: white;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    overflow: hidden;
+    color: #333;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .note-card-wrapper:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    word-wrap: break-word;
+  }
+  
+  .card-body {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+  
+  .card-details {
+    font-size: 14px;
+    color: gray;
+    cursor: pointer;
+    width: fit-content;
+  }
+  
+  .card-footer {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .card-timeline {
+    font-size: 14px;
+    color: gray;
+    font-style: italic;
+  }
+  
+  .card-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+  }
+  
+  .action-item {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+  
+  .action-item:hover {
+    opacity: 1;
+  }
+  
+  .edit {
+    color: rgb(8, 64, 131);
+  }
+  
+  .delete {
+    color: rgb(222, 63, 5);
+  }

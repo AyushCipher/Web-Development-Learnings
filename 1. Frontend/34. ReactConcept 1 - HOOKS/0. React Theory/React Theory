@@ -1,0 +1,453 @@
+Q1. WHAT IS REACT?
+
+React is a JavaScript UI library used to build fast, dynamic, component-based user interfaces.
+
+
+
+
+Q2. WHY USE REACT?
+
+Problems with Traditional JS:-
+
+* Direct DOM manipulation
+* Hard to manage state
+* Poor scalability
+* Messy code as app grows
+
+React Solves This Using:
+* Hooks — manage side effects, logic (useState, useEffect, etc.)
+* Component-Based Architecture - reusable, independent components.
+* Modular Code — break code into smaller pieces.
+* Virtual DOM (performance) - Improves performance by minimizing direct DOM manipulation and by reducing costly real DOM operations through intelligent diffing and reconciliation.
+* Declarative UI
+* State Management — easily manage and update UI state.
+* Props — data passing mechanism between components.
+
+
+
+
+
+Q3. DIFFERENCES BETWEEN A LIBRARY AND A FRAMEWORK:-
+
+LIBRARY - A library is a collection of pre-written, reusable code (functions, classes, or modules) that helps developers perform specific tasks without writing everything from scratch.
+
+A library focuses on one particular functionality, not the entire application.
+
+🔹 Key Characteristics of a Library:-
+
+✔️ You are in control
+
+* You decide when, where, and how to use the library.
+* The library does not control your application flow.
+
+✔️ You call the library code
+
+* Your code calls the library functions when needed.
+* The library never calls your code automatically.
+
+✔️ Task-focused
+
+* Designed to solve specific problems, such as:
+* UI rendering
+* HTTP requests
+* Utility operations
+* DOM manipulation
+
+✔️ Flexible & Lightweight
+
+* Can be easily added or removed.
+* Can be used alongside other libraries.
+
+EXAMPLE: axios.get("/api/data") --> You decide when this runs.
+
+
+
+
+
+FRAMEWORK: A framework is a complete platform or structure for building applications. It provides:
+
+* Predefined architecture
+* Rules and conventions
+* Built-in tools
+
+A framework tells you how your app should be structured and how it should run.
+
+
+🔹 Key Characteristics of a Framework
+
+✔️ Framework controls the application
+
+* The framework decides the execution flow.
+* It calls your code at specific points.
+
+✔️ Inversion of Control (IoC)
+
+* Unlike libraries, you do not control the flow.
+* The framework is the “boss”.
+
+✔️ Predefined structure
+
+* Fixed folder structure
+* Fixed lifecycle
+* Rules you must follow
+
+✔️ All-in-one solution
+
+* Often includes:
+* Routing
+* State management
+* Templates
+* Dependency injection
+* Build tools
+
+
+
+
+
+
+
+Q4. Virtual DOM: 
+Improves performance by minimizing direct DOM manipulation.
+
+* Why is Virtual DOM needed?
+Because updating the real DOM is slow. Every change to the DOM involves re-rendering parts of the page, which is expensive and slow.
+
+React solves this by:
+
+* Keeping a Virtual DOM in memory.
+* Comparing the new Virtual DOM with the previous one (this is called diffing).
+* Updating only the changed parts in the real DOM — this is called reconciliation.
+
+
+
+⚙️ How it works (Step-by-Step):
+
+React avoids unnecessary real DOM updates by using three internal mechanisms:
+
+1. Virtual DOM
+2. Diffing Algorithm
+3. Reconciliation Process
+
+STEP - 1:
+When you write JSX:
+
+<h1>Hello Ayush</h1>
+
+
+React converts this into a Virtual DOM object:
+
+{
+  type: 'h1',
+  props: { children: 'Hello Ayush' }
+}
+
+
+
+STEP - 2:
+When state or props change, React:
+
+* Creates a new Virtual DOM tree:
+When state or props change, React re-renders the component and generates a new Virtual DOM tree in memory.
+
+* Compares with the previous Virtual DOM (Diffing):
+React compares the new Virtual DOM with the previous one using a heuristic O(n) diffing algorithm instead of a costly brute-force comparison.
+
+* Identifies minimal changes:
+The diffing process determines exactly which elements, attributes, or text nodes have changed.
+
+* Updates the real DOM (Reconciliation):
+React applies only the required changes to the real DOM (patching), leaving unchanged parts untouched.
+
+
+
+
+
+
+
+
+Q5. SPA (Single Page Application):-
+* Avoids full-page reloads.
+* Faster dynamic UI updates.
+
+
+
+
+
+
+🟨 5. Not Covered Yet:
+🟡 Dynamic Updation
+React efficiently updates and re-renders only the changed parts of the DOM.
+
+🟡 Async
+Async rendering and data fetching (e.g., using fetch, axios, etc.).
+
+Components handle async operations using useEffect, Promises, or async/await.
+
+🟡 UI Architecture Sketch
+The diagram in the top-right corner likely represents:
+
+A layout structure: Navbar, Sidebar, Main Content, Footer.
+
+Arrows indicate how data or components flow.
+
+Shows separation of concerns (Header, Sidebar, Content are different components).
+
+📌 Summary of Theory (All-in-One)
+React is a JavaScript UI library used to build modern web applications. It’s designed for:
+
+Reusability (Component-based)
+
+Modularity
+
+Performance (Virtual DOM)
+
+Dynamic updates (SPA)
+
+Cleaner and more maintainable code
+
+Integration with tools like hooks, props, and state for efficient UI logic.
+
+It’s ideal for:
+
+Single Page Applications (SPAs)
+
+Real-time dashboards
+
+Social media apps
+
+E-commerce UIs
+
+Admin panels
+
+
+
+
+
+
+
+
+
+
+
+
+1️⃣ Functional Components (Modern Way) — ✅ Recommended
+📦 Structure:
+A functional component is just a plain JavaScript function that returns JSX.
+
+
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+Or with arrow function:
+
+
+const Welcome = ({ name }) => <h1>Hello, {name}</h1>;
+
+
+
+🧠 Features:
+
+Simpler & cleaner syntax
+
+Stateless originally, but now supports state and lifecycle via Hooks like:
+
+useState for state
+
+useEffect for lifecycle
+
+🔧 With useState:
+
+import React, { useState } from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0);
+  return (
+    <div>
+      <p>Count = {count}</p>
+      <button onClick={() => setCount(count + 1)}>+</button>
+    </div>
+  );
+}
+
+
+
+2️⃣ Class Components (Old Way) — ❌ Not Preferred for New Code
+
+📦 Structure:
+A class component is a JavaScript class that extends React.Component and uses a render() method.
+
+
+import React, { Component } from 'react';
+
+class Welcome extends Component {
+  render() {
+    return <h1>Hello, {this.props.name}</h1>;
+  }
+}
+
+
+🧠 Features:
+Supports state via this.state
+
+Supports lifecycle methods like:
+
+componentDidMount()
+
+componentDidUpdate()
+
+componentWillUnmount()
+
+🔧 With state:
+
+
+
+class Counter extends React.Component {
+  constructor() {
+    super();
+    this.state = { count: 0 };
+  }
+
+  increment = () => {
+    this.setState({ count: this.state.count + 1 });
+  }
+
+  render() {
+    return (
+      <div>
+        <p>Count = {this.state.count}</p>
+        <button onClick={this.increment}>+</button>
+      </div>
+    );
+  }
+}
+
+
+
+
+
+🔗 What are Hooks in React?
+Hooks are special functions in React that let you use state, side effects, and other React features in functional components (without using class components).
+
+Introduced in React 16.8, Hooks let you "hook into" React features like state, lifecycle methods, context, refs, and more — directly in functional components.
+
+🧠 Why Use Hooks?
+✅ Allows using state in functional components
+
+✅ Makes code simpler and reusable
+
+✅ Avoids the complexity of class components
+
+✅ Enables logic reuse via custom hooks
+
+
+
+
+🔧 List of Most Commonly Used React Hooks (with detailed explanations)
+
+
+1️⃣ useState() – To manage state in a functional component
+
+import { useState } from 'react';
+
+const Counter = () => {
+  const [count, setCount] = useState(0);
+  
+  return (
+    <div>
+      <p>Count = {count}</p>
+      <button onClick={() => setCount(count + 1)}>+</button>
+    </div>
+  );
+};
+✅ Purpose:
+Create state variables in a function.
+
+Returns an array with current value & setter function.
+
+
+
+2️⃣ useEffect() – For side effects (like API calls, timers, event listeners)
+
+import { useEffect } from 'react';
+
+useEffect(() => {
+  console.log("Component Mounted");
+
+  return () => {
+    console.log("Cleanup code here");
+  };
+}, []);
+✅ Purpose:
+Run code after render (e.g. fetch data, subscriptions)
+
+Runs:
+
+Once (on mount) if [] is passed
+
+Every time dependencies change [dep1, dep2]
+
+On cleanup (like componentWillUnmount)
+
+
+
+3️⃣ useContext() – Access context value without manually passing props
+
+const theme = useContext(ThemeContext);
+✅ Purpose:
+Allows consuming data from React Context API.
+
+Avoids prop drilling for deeply nested components.
+
+
+
+4️⃣ useRef() – For DOM access or persisting a value without re-render
+
+const inputRef = useRef();
+
+const focusInput = () => {
+  inputRef.current.focus();
+};
+✅ Purpose:
+Reference DOM elements (like document.getElementById)
+
+Store mutable values that don’t trigger re-render
+
+
+
+5️⃣ useMemo() – Memoize a computed value to improve performance
+
+const expensiveValue = useMemo(() => {
+  return computeSomething(num);
+}, [num]);
+✅ Purpose:
+Cache the result of a computation to avoid recalculating it unless dependencies change
+
+
+
+6️⃣ useCallback() – Memoize a function to prevent re-creation
+
+const handleClick = useCallback(() => {
+  console.log("Clicked");
+}, []);
+✅ Purpose:
+Cache a function and prevent re-renders of child components that receive this function as a prop
+
+
+
+7️⃣ useReducer() – For managing complex state logic (like Redux)
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case "increment":
+      return { count: state.count + 1 };
+    default:
+      return state;
+  }
+};
+
+const [state, dispatch] = useReducer(reducer, { count: 0 });
+✅ Purpose:
+Alternative to useState for complex state logic
+
+Best for toggles, counters, forms, etc.
+

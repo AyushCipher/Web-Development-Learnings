@@ -1,0 +1,33 @@
+# Q. THE ORIGINAL EXERCISE'S DEPLOY WORKFLOW RUNS `docker compose up`, BUT
+#    SHIPPED NO docker-compose.yml AT ALL - WHY DOES THAT MATTER?
+# ANS: Without this file, `docker compose up -d --build` on the EC2
+# instance would fail outright (nothing to compose) - the workflow could
+# SSH in and run its steps successfully while the actual deploy step
+# silently errors, which is a particularly easy kind of failure to miss
+# since the GitHub Actions run itself might still show green up to that
+# point depending on shell settings. Compose (even for a single service)
+# is also what gives you the "map a chosen port on the host to Node's
+# default 5000" step and a stable service name for future additions
+# (e.g. a second service like a reverse proxy or a database) - both are
+# real reasons to use Compose here rather than a bare `docker run`.
+services:
+  app:
+    build:
+      context: .
+      args:
+        # Reads from the GIT_COMMIT shell/environment variable at build
+        # time (see README.md for the exact command) - falls back to
+        # "unknown" if it isn't set, matching the Dockerfile's own default.
+        # This is how the /version route gets a real commit hash despite
+        # .git being outside this folder's build context - see the Q&A in
+        # Dockerfile and index.js for the full reasoning.
+        GIT_COMMIT: ${GIT_COMMIT:-unknown}
+    restart: unless-stopped
+    ports:
+      # HOST_PORT:CONTAINER_PORT - change the left side if 5000 is already
+      # used by something else on your EC2 instance; the right side must
+      # stay 5000 to match EXPOSE/PORT in the Dockerfile/index.js.
+      - "5000:5000"
+    environment:
+      PORT: 5000
+      NODE_ENV: production

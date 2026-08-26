@@ -1,0 +1,2 @@
+* Improve the UI if possible add more beautiful components
+* The payment for every asset should not be static 5 dollars rather give an option for user to set it 

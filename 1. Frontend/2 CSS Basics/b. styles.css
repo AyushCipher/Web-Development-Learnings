@@ -1,0 +1,12 @@
+h1{
+    color: green;
+    /* p is selector, color is property and greeen is the value  */
+}
+
+/* # DIFFERENCES BETWEEN img and background-image tag:-
+
+1. Content vs. Decoration: The <img> tag is part of the document's content, while background-image is purely for decorative purposes.
+2. Accessibility: The <img> tag can have alt text for screen readers, providing better accessibility. 
+Background images do not contribute to accessibility and are not recognized by screen readers.
+3. Positioning and Resizing: background-image allows more control over the positioning, repeating, and resizing of the image compared to the <img> tag.
+4. Interaction: The <img> tag can be targeted for events and can have links (using <a> tags), whereas background images cannot be directly interacted with. */

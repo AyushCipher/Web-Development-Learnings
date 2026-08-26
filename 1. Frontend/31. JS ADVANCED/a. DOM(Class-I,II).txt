@@ -1,0 +1,762 @@
+# WINDOW:- The window object is the global object in the browser that represents the browser window or tab. 
+           All global variables and functions are properties/methods of the window object.
+
+*** Key Points:
+
+* The root of BOM and DOM.
+
+* Automatically created when a browser tab opens.
+
+* Accessed using window (can also omit it, e.g., alert() is same as window.alert())
+EG: window.alert("Hello!");             // Shows alert
+    console.log(window.innerWidth);     // Shows browser window width
+
+
+
+# DOM(Document Object Model):- The DOM represents the structured content (HTML/XML) of a web page as a tree of objects. 
+It allows JavaScript to access, modify, and update the content, structure, and style of the page.
+The HTML/whole code which we convert into Javascript Object is called DOM.
+
+All the tasks that are related to HTML, it's structure and it's manipulation are all handled by DOM whereas the tasks which are
+performed by URL or browser returns it in response are handled by BOM.
+
+
+# CODE DEMONSTRATING USECASE OF BOM BY CHANGING BACKGROUND TO RANDOM COLORS:
+<body>
+
+    <h1>Click to change background color</h1>
+    <button onclick="changeColor()">Change Background</button>
+
+    <script>
+        // Array of colors
+        const colors = ["lightblue", "lightgreen", "lightcoral", "lavender", "peachpuff", "khaki", "plum", "mistyrose", "gold"];
+
+        function changeColor() {
+            // Generate a random index
+            const randomIndex = Math.floor(Math.random() * colors.length);
+            // Change background to the randomly selected color
+            document.body.style.backgroundColor = colors[randomIndex];
+        }
+    </script>
+
+</body>
+
+
+
+
+
+# BOM(Browser Object Model):- When we want to communicate with browser other than the matter of content, then we use Box Object Model.
+The Browser Object Model (BOM) is a collection of objects exposed by the browser that allow JavaScript to interact with the browser window, document, and other browser-specific functionalities.
+The BOM is a part of the browser that provides access to browser-specific features — things outside the page content itself, like the browser window, tabs, history, location (URL), etc.
+
+The Browser Object Model represents additonal objects by the browser for working with everything except the document.
+EG:- the functions alert/confirm/prompt are also a part of the BOM.
+     console.log(window.location.href);         // Current page URL
+     console.log(window.navigator.userAgent);   // Browser info
+     window.history.back();                     // Go back in history
+
+
+# CODE DEMONSTRATING USECASE OF BOM BY TRACKING THE SIZE OF WINDOW:
+
+<body>
+
+  <h1>Window Dimensions</h1>
+  <div id="dimensions"></div>
+
+  <script>
+    const dimensionsDisplay = document.getElementById('dimensions');
+
+    function updateDimensions() {
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+      dimensionsDisplay.textContent = `Width: ${width}px | Height: ${height}px`;
+    }
+
+    // Initial load
+    updateDimensions();
+
+    // Update on resize
+    window.addEventListener('resize', updateDimensions);
+  </script>
+
+</body>
+
+
+
+
+# DOM :- [ACCESS ELEMENTS]
+
+1.} getElementById('__Name of Id___') :- Used to fetch the content of an ID.
+
+a. It is called on a document Object.
+b. It returns a Single element since id is unique.
+c. The getElementById() method is one of the most common methods in the HTML DOM. It is used almost every time you want to read or edit an HTML element.
+d. It returns null if the element does not exist.
+
+
+2.} getElementByClassName('__Name of Class___') :
+
+a. It returns a collection of elements [like array but not exactly array] with a specified class name(s).
+b. It returns an HTML Collection.
+
+
+3.} getElementByTagName('__Name of Tag___') :
+
+a. It returns a collection of all elements [like array but not exactly array] with a specified tag name.
+b. This method returns an HTML Collection.
+c. The getElementsByTagName() property is read-only.
+
+
+# HACK :- If we hover on a particular para, heading, or any part of a website then on writing $0 in console window we could be able to see whole HTML code of that part,
+or else we can also equate that with a variable. 
+Eg:  let para = $0;
+     para          
+On witing so whatever the code was visible by doing $0 would be copied and stored into para.
+
+
+4.} querySelector('__Name of.Class/#Id/Tag___'): Used to find a particular/single id, class or tag.
+
+a. The querySelector() method returns the first element that matches a CSS selector.
+
+
+5.} querySelectorAll('__Name of .Class/#Id/Tag___'): Used to find multiple/all elements that matches the name of given id/class/tag.
+
+a. The querySelectorAll() method returns all elements that matches a CSS selector(s).
+b. The querySelectorAll() method returns a NodeList.
+
+
+
+
+# CONCEPT OF UPDATING EXISTING CONTENT OF WEBPAGE:-
+
+1. INNER HTML:- The innerHTML property is used to access or modify(get/set) the HTML content of an element.
+When you use the innerHTML property, it reads both the HTML markup and the text content of the element. 
+This means when you use it to set the content of elements, you can include HTML tags, and the browser will render them correctly. 
+Eg:- 
+
+<div id="demo1">
+  <b>Hello</b> World!
+</div>
+
+<script>
+    console.log(document.getElementById("demo1").innerHTML);
+    // Output: <b>Hello</b> World!
+</script>
+
+
+EG:- <div id="content">Original Content</div>
+
+     // Select the element
+     let contentDiv = document.getElementById('content');
+
+     // Update the content with new HTML
+     contentDiv.innerHTML = '<p>New <strong>HTML</strong> content with <a href="#">a link</a>.</p>';
+
+     RESULT:
+     <div id="content">
+      <p>New <strong>HTML</strong> content with <a href="#">a link</a>.</p>
+     </div>
+
+
+
+2. OUTER HTML:- Returns or sets the entire HTML element including its own tag and its content.
+                Used when we want to replace or retrieve the element along with its HTML structure.
+
+* Use innerHTML when you only need to modify or retrieve the content inside an element, such as updating text or adding new HTML elements within a container.
+* Use outerHTML when you need to replace or retrieve the entire element, including its attributes and tags.
+
+EG:- let element = document.querySelector('.company');
+     element.outerHTML;
+     // Output: '<p class="company text-xl text-textpara">Ex-Amazon, <b>SWE</b></p>'
+
+     element.outerHTML = '<div class="new-company">Ex-Google, <i>SWE</i></div>';
+     // This replaces the entire <p> element with a <div> element
+
+
+
+
+    <div id="demo2">
+      <i> Hi </i> there!
+    </div>
+
+    <script>
+      console.log(document.getElementById("demo2").outerHTML);
+    / / Output: <div id="demo2"><i>Hi</i> there!</div>
+    </script>
+
+
+InnerHTML is used for getting or setting a content of the selected tag while outerHTML is used for getting or setting content along with the selected tag.
+
+
+3. TEXT CONTENT:- Returns or sets the text content of an element and all its descendants. Ignores hidden elements and does not interpret HTML tags.
+Used when you want the raw textual content (faster than innerText).
+It also returns all text, whether it's rendered on screen or not.
+
+EXAMPLE:-   <div id="example">
+                <p>This is <span>some</span> text.</p>
+                <p style="display:none;">This text is hidden.</p>
+            </div>
+
+            <script>
+                let element = document.getElementById('example');
+                console.log(element.textContent);  // Outputs: "This is some text.This text is hidden."
+            </script>
+
+
+4. INNER TEXT:- This property focuses on the rendered text content. 
+When you use innerText to read the content of an element, it returns the text as it appears on screen. 
+It ignores HTML tags. And it also does not include text that is hidden with CSS styles.
+
+EXAMPLE:-    <div id="example">
+                <p>This is <span>some</span> text.</p>
+                <p style="display:none;">This text is hidden.</p>
+            </div>
+
+            <script>
+                let element = document.getElementById('example');
+                console.log(element.innerText);  // Outputs: "This is some text."
+            </script>
+
+
+
+
+# ADDING NEW CONTENT/ELEMENT:-
+
+We can create a new element with the help of .createElement(); 
+and then can append it for eg. to a class with the help of .apppendChild(); and that will be added at the last part of the class content.
+
+Example:-
+let content = document.querySelector('.paraClass');
+undefined
+
+content;
+<p class="paraClass text-lg font-bold false">Data Structure</p>
+
+let newPara = document.createElement('p');
+undefined
+
+newPara;
+<p></p>
+
+newPara.textContent = "This is a new paragraph.";
+
+content.appendChild(newPara);
+<p>This is a new paragraph</p>
+
+content;
+<p class="paraClass text-lg font-bold false">Data Structure</p>
+<p>This is a new paragraph</p>
+
+
+
+
+
+# Since we know that by inserting a para and its content in the above manner will have an impact on position such that 
+it will be placed at last of the class or tag under which it is appended forEg; we can't insert outside the element, like before or after it.
+so, we use insertAdjacentElement() method that inserts a an existing element into a specified position providing more flexibilty.
+SYNTAX: insertAdjacentElement(position, element)
+
+VALUES:- 
+
+EG:- <div id="target">Target Element</div>
+
+
+(a.) beforebegin - Inserts the new element immediately before the target element, as a sibling.
+
+
+// Create a new element
+let newElement = document.createElement('p');
+newElement.textContent = 'I am inserted before the target element.';
+
+// Insert the new element before the existing target element
+let target = document.getElementById('target');
+target.insertAdjacentElement('beforebegin', newElement);
+
+RESULT:-
+<p>I am inserted before the target element.</p>
+<div id="target">Target Element</div>
+
+
+
+(b.) afterbegin - Inserts the new element as the first child of the target element.
+
+
+// Create a new element
+let newElement = document.createElement('p');
+newElement.textContent = 'I am the first child inside the target element.';
+
+// Insert the new element as the first child of the target element
+let target = document.getElementById('target');
+target.insertAdjacentElement('afterbegin', newElement);
+
+RESULT:-
+<div id="target">
+  <p>I am the first child inside the target element.</p>
+  Target Element
+</div>
+
+
+
+(c.) beforeend - Inserts the new element as the last child of the target element.
+
+// Create a new element
+let newElement = document.createElement('p');
+newElement.textContent = 'I am inserted after the target element.';
+
+// Insert the new element after the target element
+let target = document.getElementById('target');
+target.insertAdjacentElement('afterend', newElement);
+
+RESULT:-
+<div id="target">Target Element</div>
+<p>I am inserted after the target element.</p>
+
+
+
+(d.) afterend - Inserts the new element immediately after the target element, as a sibling.
+
+
+// Create a new element
+let newElement = document.createElement('p');
+newElement.textContent = 'I am the last child inside the target element.';
+
+// Insert the new element as the last child of the target element
+let target = document.getElementById('target');
+target.insertAdjacentElement('beforeend', newElement);
+
+RESULT:-
+<div id="target">Target Element</div>
+<p>I am inserted after the target element.</p>
+
+
+
+
+
+# 2. insertAdjacentHTML():- Inserts HTML text as a string, which is then parsed into elements.
+SYNTAX: target.insertAdjacentHTML(position, htmlString);
+
+const container = document.getElementById("container");
+
+(a.) Insert before the #container element:-
+    container.insertAdjacentHTML("beforebegin", "<h2>Before Begin</h2>");
+    
+    RESULT:
+    <h2>Before Begin</h2>
+    <div id="container">...</div>
+
+(b.) Insert just inside #container, before the first child:-
+
+    container.insertAdjacentHTML("afterbegin", "<p>Inserted at the start</p>");
+    
+    RESULT:
+    <div id="container">
+      <p>Inserted at the start</p>
+      <p>This is an existing paragraph.</p>
+    </div>
+
+(c.) Insert just inside #container, after the last child:-
+
+    container.insertAdjacentHTML("beforeend", "<p>Inserted at the end</p>");
+    
+    RESULT:-
+    <div id="container">
+      <p>Inserted at the start</p>
+      <p>This is an existing paragraph.</p>
+      <p>Inserted at the end</p>
+    </div>
+
+(d.) Insert after the #container element:-
+
+    container.insertAdjacentHTML("afterend", "<h2>After End</h2>");
+    
+    REZULT:-
+    <div id="container">...</div>
+      <h2>After End</h2>
+
+
+
+# DIFFERENCES BETWEEN  insertAdjacentHTML and insertAdjacentElement:-
+Content Type:
+* insertAdjacentHTML: Takes a string of HTML.
+* insertAdjacentElement: Takes an existing DOM element.
+
+Usage Context:
+* insertAdjacentHTML: Useful when you have HTML as a string that you want to parse and insert.
+* insertAdjacentElement: Useful when you already have a DOM element (created with JavaScript) that you want to insert.
+
+Parsing: Parsing is the process of analyzing and converting a string of text into a structured format that a program or browser can understand and manipulate.
+In web development, parsing involves interpreting HTML, CSS, and JavaScript strings to create or manipulate the DOM and apply styles or execute code.
+Methods like insertAdjacentHTML rely on parsing to convert HTML strings into DOM elements that can be inserted into the document.
+* insertAdjacentHTML: The string of HTML is parsed and then the resulting elements are inserted.
+* insertAdjacentElement: The element is directly inserted without any parsing.
+
+Performance:
+* insertAdjacentHTML: Can be more performance-intensive because it involves parsing HTML strings.
+* insertAdjacentElement: Typically more efficient since it directly manipulates existing DOM elements without parsing.
+
+
+
+
+
+# In the same way, we can also remove the child items by removeChild() method:-
+
+* It is opposite of appendChild();
+* Parent element needs to be know before removing child element.
+* After that the child can be removed.
+
+EXAMPLE:-
+
+HTML:-
+<div id="container">
+  <p id="para1">This is paragraph 1.</p>
+  <p id="para2">This is paragraph 2.</p>
+</div>
+
+
+JAVASCRIPT:-
+// Select the parent element
+let container = document.getElementById('container');
+
+// Select the child element to be removed
+let para1 = document.getElementById('para1');
+
+// Remove the child element
+container.removeChild(para1);
+
+
+OUTPUT:-    <div id="container">
+                <p id="para2">This is paragraph 2.</p>
+            </div>
+
+
+
+
+# LEARNING TO STYLE PAGE CONTENT USING JAVASCRIPT:-
+
+We can do styling in csss with the help of JavaScript in the following ways:-
+
+1. style - The style property allows you to directly change a single CSS style property of an element via JavaScript. 
+It accesses the inline style of the element.
+
+EXAMPLE:
+
+  const element = document.getElementById('myDiv');
+  element.style.backgroundColor = 'lightblue';    // Sets background-color
+  element.style.fontSize = '20px';                // Sets font-size
+
+NOTE:- Notice that we’re using camelCase rather than adding a dash ("-") between the styling properties (e.g. fontWeight rather than font-weight).
+This is required if we’re going to set CSS with JavaScript.
+
+
+
+
+2. style.cssText - The cssText property of the style object lets us set multiple CSS style rules as a single string at once, 
+overwriting any existing inline styles.
+
+EXAMPLES:
+
+  const element = document.getElementById('myDiv');
+  element.style.cssText = 'background-color: lightblue; font-size: 20px; color: red;';
+
+
+
+
+
+3. setAttribute - The setAttribute() method sets the value of an attribute on the specified element. It can be used to set the entire style attribute as a string,
+allowing multiple CSS styles to be set at once, just like writing inline styles in HTML. 
+
+ setAttribute() takes two arguments:
+ * name - A string specifying the name of the attribute whose value is to be set.
+ * value - A string containing the value to assign to the attribute. Any non-string value specified is converted automatically into a string.
+
+
+EXAMPLE:
+  const element = document.getElementById('myDiv');
+  element.setAttribute('style', 'background-color: lightblue; font-size: 20px; color: red;');
+
+
+
+
+// We use classList and className on JavaScript DOM to manipulate classes from the element. 
+
+4. className -
+Purpose: Directly sets or retrieves the entire class attribute of an element.
+Usage: Suitable for situations where you want to completely replace all classes on an element or get the current list of classes as a string.
+
+Example:
+
+<div id="myDiv" class="container box red"></div>
+
+let myDiv = document.getElementById('myDiv');
+console.log(myDiv.className); // Output: "container box red"
+
+// Set className (this will overwrite any existing classes)
+myDiv.className = "newClass";
+console.log(myDiv.className); // Output: "newClass"
+
+
+5. classList - classList is a property of a DOM element that returns a live DOMTokenList object containing all the classes of that element.
+The classList property is used to manage the classes of an element in a more flexible and dynamic way. 
+It provides several methods to add, remove, contains, toggle[class lgi hogi to hta dega aur na lgi ho to add kr dega], replace classes 
+without affecting other existing classes on the element.
+
+Example:
+<div id="myDiv" class="container"></div>
+
+
+let myDiv = document.getElementById('myDiv');
+
+// Add a class (without overwriting the existing ones)
+myDiv.classList.add('active');
+console.log(myDiv.className);         // Output: "container active"
+
+// Remove a class
+myDiv.classList.remove('container');
+console.log(myDiv.className);         // Output: "active"
+
+// Toggle a class (add if it doesn't exist, remove if it does)
+myDiv.classList.toggle('hidden');     // Adds 'hidden'
+console.log(myDiv.className);         // Output: "active hidden"
+myDiv.classList.toggle('hidden');     // Removes 'hidden'
+console.log(myDiv.className);         // Output: "active"
+
+element.classList.replace('active', 'focused');     // Output: "focused"
+console.log(element.classList.contains('active'));  // Output: false
+console.log(element.classList.length);              // Output: 1
+
+Example:
+let content = $0;
+undefined
+
+content;
+<h1>Element.remove()</h1>
+
+content.style.color ='red'; ---> This property changes the style of a tag but only one at a time.
+'red'
+
+content.style.backgroundColor = 'white';
+'white'
+
+content.style.fontWeight = 900;
+
+
+
+
+content.style.cssText = 'color:green; background-color: yellow; font-size: 4em;'; --->This property changes the multiple style properties of a tag  at a time.
+'color:green; background-color: yellow; font-size: 4em;'
+
+
+
+content.setAttribute("style", "background-color:red;");  --->This property changes the multiple style properties of a tag  at a time and also we can set an Class/Id like an ID in h1 heading done below.
+undefined
+
+content.setAttribute("style", "color:orange;");
+undefined
+
+content.setAttribute("style", "color:orange; background-color:red;");
+undefined
+
+content.setAttribute("id", "HeadingKiID");
+undefined
+
+
+
+// If we use className, then on acquiring a particular class within which multiple classes are present will be given as a string from
+and we have to then convert it into array to manipulate classes whereas if we do same by classList then class will be obtained in an object form.
+
+let content = $0;
+undefined
+
+content;
+<div class=" first second third first-fold css-euihue">...</div>
+
+content.className;
+'first second third first-fold css-euihue'
+
+typeof content.className;
+'string'
+
+content.className.split(' ');
+(6) ['', 'first', 'second', 'third', 'first-fold', 'css-euihue']
+
+let classNames = content.className.split(' ');
+undefined
+
+classNames;
+(6) ['', 'first', 'second', 'third', 'first-fold', 'css-euihue']
+
+content.className.trim().split(' ');
+(5) ['first', 'second', 'third', 'first-fold', 'css-euihue']
+
+classNames = content.className.trim().split(' ');
+(5) ['first', 'second', 'third', 'first-fold', 'css-euihue']
+
+
+
+
+content;
+<div class=" first second third first-fold css-euihue">...</div>
+
+content.classList;
+DOMTokenList(5) ['first', 'second', 'third', 'first-fold', 'css-euihue', value: ▼ first second third first-fold css-euihue']
+0: "first"
+1: "second"
+2: "third"
+3: "first-fold"
+4:
+"css-euihue"
+length: 5
+value: "first second third first-fold css-euihue"
+ [[Prototype]]: DOMTokenList
+
+typeof content.classList;
+'object'
+
+
+
+
+// TOGGLE AND REPLACE PROPERTIES OF classList:
+
+Purpose: Toggles a class on an element. If the class is present, it removes it; if the class is absent, it adds it.
+Usage: Useful for switching states, like showing/hiding an element or turning a feature on/off.
+Example:
+
+element.classList.toggle('active');
+If the element has the class active, this will remove it.
+If the element does not have the class active, this will add it.
+With Optional Force Parameter:
+
+element.classList.toggle('active', true);  // Adds the class
+element.classList.toggle('active', false); // Removes the class
+The second argument forces the class to be added (true) or removed (false).
+
+classList.replace
+Purpose: Replaces an existing class with a new class.
+Usage: Useful when you need to switch from one class to another, like changing themes or updating styles.
+Example:
+
+
+element.classList.replace('old-class', 'new-class');
+If the element has the class old-class, this will replace it with new-class.
+If the element does not have the class old-class, nothing happens.
+
+
+
+
+
+# BROWSER EVENTS:- A Browser event is a signal that something has happened. All DOM nodes generate such signals (but events are not limited to DOM).
+We can view the different occuring events in website through monitorEvents(document) and can turn this off by unmonitorEvents(document);
+Here’s a list of the most useful DOM events, just to take a look at:
+
+Mouse events:
+* click – when the mouse clicks on an element (touchscreen devices generate it on a tap).
+* contextmenu – when the mouse right-clicks on an element.
+* mouseover / mouseout – when the mouse cursor comes over / leaves an element.
+* mousedown / mouseup – when the mouse button is pressed / released over an element.
+* mousemove – when the mouse is moved.  
+
+
+
+# EVENT TARGET :- It is an interface(blueprint) implemented by Object that can recieve events
+and may have listeners for them.
+
+The event.target is a property in JavaScript that references the element on which an event originally occurred. 
+It is commonly used within event listeners to determine which element triggered the event.
+
+Element-->Node-->Event Target[Top level entity(everything inluding document/DOM is inside it)]
+
+
+
+
+# EVENT LISTENER:- An event listener is a function in JavaScript that waits for an event to occur then responds to it.
+
+
+
+
+# PSEUDOCODE:-
+
+Syntax:-   element.addEventListener(event, callback, useCapture);
+
+
+* element: The DOM element you want to attach the event listener to.
+* event: A string representing the event type (e.g., "click", "mouseover", "keydown").
+* callback: The function that will be executed when the event is triggered.
+* useCapture (optional): A boolean value that determines the event propagation phase. The default is false (i.e., event will be captured in the bubbling phase).
+
+
+The addEventListener() method of the EventTarget interface sets up a function that will be called whenever the specified event is delivered to the target.
+
+let content = document.querySelector('h1');
+undefined
+
+content;
+<h1>EventTarget.addEventListener()</h1>
+
+content.addEventListener('click', function() { 
+    content.style.background = 'red';
+});
+undefined
+
+RESULT: On clicking content of h1, h1 background-color changes to red.
+
+
+
+
+document.addEventListener('click', function(){
+    console.log('I clicked on Document');
+});
+undefined
+
+RESULT: (4) I clicked on Document  ---> No.(4) will increase as we increase the no of clicks.
+
+
+
+
+const button = document.getElementById('myButton');
+
+button.addEventListener('click', function() {
+    console.log('Button was clicked!');
+});
+
+
+
+
+
+# PHASES OF AN EVENT:-
+
+There are three different phases during the lifecycle of a JavaScript event.
+
+1. Capturing Phase - The event starts at the root of the DOM and travels down to the target element.
+2. Target Phase - The event reaches the target element where it was originally triggered.
+3. Bubbling Phase - After reaching the target element, the event travels back up the DOM tree to the root.
+They follow the same order as listed above.
+
+
+Capturing Phase is when the event goes down to the element. 
+The target phase is when the event reaches the element and the Bubbling phase is when the event bubbles/goes up from the element to the top[parent].
+
+
+
+
+EXAMPLE WITH PROPAGATION CONTROL:- 
+
+document.getElementById('parent').addEventListener('click', function() {
+    console.log('Parent clicked!');
+}, true); // true makes it run in capture phase
+
+document.getElementById('child').addEventListener('click', function(event) {
+    console.log('Child clicked!');
+    event.stopPropagation(); // Stops the event from bubbling up
+});
+
+
+
+
+# SYNTAX TO ENABLE IT: addEventListener(type, listener, useCapture)
+
+By default, the event is in bubbling phase but if you want to change it to capture phase then:
+
+addEventListener(type, listener, true); 
+// Set useCapture to true in order to enable capture phase and false to change it to bubble phase.
+
+There is no direct way to enable the target phase specifically when using addEventListener. 

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p.and {
+    /* The font-family property specifies the font for an element.
+    The font-family property can hold several font names as a "fallback" system.
+    If the browser does not support the first font, it tries the next font. */
+
+            font-family: "Times New Roman", Times, serif;
+        }
+        
+        p.band {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        div.a {
+    /* The font-size property sets the size of a font. */
+
+            font-size: 15px;
+            /* font-size: large;
+            font-size: 150%; */
+        }
+        p.b {
+    /* The font-style property specifies the font style for a text. */
+
+            font-style: italic;
+
+    /* The font-weight property sets how thick or thin characters in text should be displayed. */
+    
+            font-weight: 485;
+            /* font-weight: bold;
+            font-weight: normal; */
+        }
+
+        p.c {
+            font-style: oblique;
+        }
+           
+    /* Main Difference between both is font-family you assign more than one font style. When the browser can't access it it reverts to the next font
+       while with the font-style you set only one font. If it fails to load the browser uses its default font */ 
+
+        @font-face {
+           /* In order to add a custom/external font of your choice from anywhere in web, Specify a font named "myFirstFont", and specify the URL where it can be found: */
+            font-family: myFirstFont;
+            src: url(sansation_light.woff);
+        }
+        /* Specifying on which part to use my provided external font */
+        div {
+            font-family: myFirstFont;
+        }
+        </style>
+
+</head>
+<body>
+    <p class="and">This is a paragraph, shown in the Times New Roman font.</p><br>
+
+    <p class="band">This is a paragraph, shown in the Arial font.</p><br><br>
+
+    <div class="a">This is some text.</div><br><br>
+
+    <p class="b">This is a paragraph, italic.</p>
+    <p class="c">This is a paragraph, oblique.</p><br><br>
+
+    <div>With CSS, websites can finally use fonts other than the pre selected "web-safe" fonts.</div>
+
+    
+</body>
+</html>

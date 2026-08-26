@@ -1,0 +1,50 @@
+.container{
+    width: 100%;
+    height: 215px;
+    background-color:  2px solid red;
+    background-color: yellow;
+}
+/* Animation lets an element gradually change from one state to another */
+.box{
+    height: 212px;
+    width: 212px; 
+    background-color: aqua;
+    border: 2px solid green;
+    animation-name: ayush; /* ---> name dete ha taki keyframes k help se kuch properties set kr ske */
+    animation-duration: 3s; 
+    animation-iteration-count: 1; /* ---> Animation kitne bar repeat krega */
+    animation-timing-function: ease-out;
+    animation-delay: 1s;
+ /* animation-direction: alternate; ---> Animation kis direction pe hoga normal, reverse ye set kr skte ha
+    Also linear: If this value is specified for the property then the animation plays with the same speed from start to end.*/
+    animation-fill-mode: forwards; /* ---> animation-direction: alternate ko comment out krna pdega aur animation-iteration-count ko infinite se htana pdega[By doing this animation will move from start to end point and stop at end point]
+    animation-fill-mode: backward krne se animation forward jaise aage jyega lekin wpas inital position pe bhi set ho jyega*/
+}
+
+/* Keyframes are needed to define the start and end points for action of animation.  
+Can try to build bufffering using animation[keyframe]*/
+@keyframes ayush{
+    /* from{
+        width: 212px;
+    }
+    to{
+        width: 100%;
+
+    } */
+    0%{
+        width: 212px;
+        background-color: aqua;
+    }
+    30%{
+        width: 35%;
+        background-color: aquamarine;
+    }
+    65%{
+        width: 75%;
+        background-color: blue;
+    }
+    100%{
+        width: 100%;
+        background-color: violet;
+    }
+}

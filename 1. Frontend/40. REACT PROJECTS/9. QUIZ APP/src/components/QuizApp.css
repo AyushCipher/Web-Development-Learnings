@@ -1,0 +1,143 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.quiz-container {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 900px;
+  padding: 70px;
+  box-sizing: border-box;
+}
+
+.settings, .quiz, .result {
+  text-align: center;
+}
+
+.settings h2 span {
+  white-space: nowrap;
+}
+
+h2 {
+  margin: 0 0 30px;
+  font-size: 3rem;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  border-radius: 6px;
+  font-size: 1.05rem;
+  border: 1px solid #ccc;
+}
+
+button {
+  margin-top: 25px;
+  padding: 14px 28px;
+  background-color: #5c6bc0;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #3f51b5;
+}
+
+.quiz-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#progress-bar {
+  width: 70%;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 24px;
+}
+
+#progress {
+  height: 100%;
+  background-color: #76c7c0;
+  transition: width 0.5s ease;
+}
+
+#timer {
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+#question-container {
+  margin: 40px 0 20px;
+}
+
+#question-container h3 {
+  font-size: 1.6rem;
+  margin: 30px 0;
+  color: #333;
+  min-height: 80px;
+  text-align: center;
+}
+
+#answer-buttons {
+  list-style: none;
+  padding: 0;
+}
+
+#answer-buttons li {
+  margin: 15px 0;
+}
+
+#answer-buttons button {
+  width: 100%;
+  padding: 16px;
+  background-color: #ffffff;
+  border: 2px solid #333;
+  border-radius: 8px;
+  color: #333;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+#answer-buttons button:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.02);
+}
+
+.result h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.result h2 span {
+  white-space: nowrap;
+}

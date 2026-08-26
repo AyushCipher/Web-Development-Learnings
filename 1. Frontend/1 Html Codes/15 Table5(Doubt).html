@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Table</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+        th,tr,td {
+            border: 2px solid black;
+            padding: 8px;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <h2>Time Table</h2>
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th>I</th>
+                <th>II</th>
+                <th>III</th>
+                <th>IV</th>
+                <th>V</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            <tr>
+                <td>Mon</td>
+                <td colspan="2">WT Lab</td>
+                <td>DAA</td>
+                <td rowspan="3">Lunch</td>
+                <td>DBMS</td>
+            </tr>
+            <tr>
+                <td>Tue</td>
+                <td>WT</td>
+                <td colspan="2">DAA Lab</td>
+                <td>DAA</td>
+            </tr>
+            <tr>
+                <td>Web</td>
+                <td>DAA</td>
+                <td>WT</td>
+                <td>DBMS</td>
+                <td>WT</td>
+            </tr>
+        </tbody>
+        
+    </table>
+
+</body>
+</html>
+

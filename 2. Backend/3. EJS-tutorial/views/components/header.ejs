@@ -1,0 +1,25 @@
+<!--
+  PARTIAL/INCLUDE: this file is never rendered on its own - home.ejs and
+  about.ejs each include this header partial near the top and the sibling
+  footer.ejs partial near the bottom, so together the three files form ONE
+  complete HTML document per page. That's why the closing body/html tags
+  live in footer.ejs instead of here - closing them in this file would end
+  the document before each page's own content (the heading, the product
+  list, etc.) ever got a chance to render, leaving that content floating
+  outside the html element as invalid HTML.
+  NOTE: deliberately not writing the actual include-tag syntax in this
+  comment - EJS scans the whole file for its delimiters regardless of HTML
+  comment boundaries, so literal example tags here would be executed for
+  real instead of staying inert documentation (this bit us once already).
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>EJS Template Header</h1>
+    </header>

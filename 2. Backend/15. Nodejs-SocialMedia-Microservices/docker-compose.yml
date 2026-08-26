@@ -1,0 +1,236 @@
+version: '3.8'
+
+services:
+  # Three identical replicas of the gateway, load-balanced by nginx below
+  # (nginx/nginx.conf) instead of a single gateway container. None of them
+  # publish a host port anymore - nginx is now the only public entrypoint,
+  # same as every other backend service already only being reachable
+  # through the gateway rather than directly.
+  api-gateway-1:
+    build: ./api-gateway
+    env_file: ./api-gateway/.env
+    depends_on:
+      - redis
+      - rabbitmq
+    environment:
+      - REDIS_URL=redis://redis:6379
+      - RABBITMQ_URL=amqp://rabbitmq:5672
+    healthcheck:
+      test: [ "CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000/health" ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  api-gateway-2:
+    build: ./api-gateway
+    env_file: ./api-gateway/.env
+    depends_on:
+      - redis
+      - rabbitmq
+    environment:
+      - REDIS_URL=redis://redis:6379
+      - RABBITMQ_URL=amqp://rabbitmq:5672
+    healthcheck:
+      test: [ "CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000/health" ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  api-gateway-3:
+    build: ./api-gateway
+    env_file: ./api-gateway/.env
+    depends_on:
+      - redis
+      - rabbitmq
+    environment:
+      - REDIS_URL=redis://redis:6379
+      - RABBITMQ_URL=amqp://rabbitmq:5672
+    healthcheck:
+      test: [ "CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000/health" ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "3000:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on:
+      - api-gateway-1
+      - api-gateway-2
+      - api-gateway-3
+
+  identity-service:
+    build: ./identity-service
+    env_file: ./identity-service/.env
+    depends_on:
+      - mongo
+      - redis
+      - rabbitmq
+    environment:
+      - MONGODB_URI=mongodb://mongo:27017/identity-service-db
+      - REDIS_URL=redis://redis:6379
+      - RABBITMQ_URL=amqp://rabbitmq:5672
+    healthcheck:
+      test: [ "CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3001/health" ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  post-service:
+    build: ./post-service
+    env_file: ./post-service/.env
+    depends_on:
+      - mongo
+      - redis
+      - rabbitmq
+    environment:
+      - MONGODB_URI=mongodb://mongo:27017/post-service-db
+      - REDIS_URL=redis://redis:6379
+      - RABBITMQ_URL=amqp://rabbitmq:5672
+    healthcheck:
+      test: [ "CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3002/health" ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  media-service:
+    build: ./media-service
+    env_file: ./media-service/.env
+    depends_on:
+      - mongo
+      - redis
+      - rabbitmq
+    environment:
+      - MONGODB_URI=mongodb://mongo:27017/media-service-db
+      - REDIS_URL=redis://redis:6379
+      - RABBITMQ_URL=amqp://rabbitmq:5672
+    healthcheck:
+      test: [ "CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3003/health" ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  search-service:
+    build: ./search-service
+    env_file: ./search-service/.env
+    depends_on:
+      - mongo
+      - redis
+      - rabbitmq
+    environment:
+      - MONGODB_URI=mongodb://mongo:27017/search-service-db
+      - REDIS_URL=redis://redis:6379
+      - RABBITMQ_URL=amqp://rabbitmq:5672
+    healthcheck:
+      test: [ "CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3004/health" ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  like-service:
+    build: ./like-service
+    env_file: ./like-service/.env
+    depends_on:
+      - mongo
+      - redis
+      - rabbitmq
+      - post-service
+    environment:
+      - MONGODB_URI=mongodb://mongo:27017/like-service-db
+      - REDIS_URL=redis://redis:6379
+      - RABBITMQ_URL=amqp://rabbitmq:5672
+      - POST_SERVICE_URL=http://post-service:3002
+    healthcheck:
+      test: [ "CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3005/health" ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  comment-service:
+    build: ./comment-service
+    env_file: ./comment-service/.env
+    depends_on:
+      - mongo
+      - redis
+      - rabbitmq
+      - post-service
+    environment:
+      - MONGODB_URI=mongodb://mongo:27017/comment-service-db
+      - REDIS_URL=redis://redis:6379
+      - RABBITMQ_URL=amqp://rabbitmq:5672
+      - POST_SERVICE_URL=http://post-service:3002
+    healthcheck:
+      test: [ "CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3006/health" ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  notification-service:
+    build: ./notification-service
+    env_file: ./notification-service/.env
+    depends_on:
+      - mongo
+      - rabbitmq
+    environment:
+      - MONGODB_URI=mongodb://mongo:27017/notification-service-db
+      - RABBITMQ_URL=amqp://rabbitmq:5672
+    healthcheck:
+      test: [ "CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3007/health" ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  # The one service with a published host port besides nginx - Socket.IO
+  # clients connect straight to it (see nginx/nginx.conf's and this
+  # service's own comments for why it isn't proxied through the gateway).
+  # env_file must supply a JWT_SECRET matching identity-service's, since
+  # this is the one service that verifies JWTs itself instead of trusting
+  # a header the gateway already validated.
+  chat-service:
+    build: ./chat-service
+    ports:
+      - "3008:3008"
+    env_file: ./chat-service/.env
+    depends_on:
+      - mongo
+    environment:
+      - MONGODB_URI=mongodb://mongo:27017/chat-service-db
+    healthcheck:
+      test: [ "CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3008/health" ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  mongo:
+    image: mongo:7
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    healthcheck:
+      test: [ "CMD", "mongosh", "--eval", "db.adminCommand('ping')" ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    healthcheck:
+      test: [ "CMD", "rabbitmq-diagnostics", "-q", "ping" ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+volumes:
+  mongo_data:

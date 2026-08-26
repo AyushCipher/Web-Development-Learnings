@@ -1,0 +1,10 @@
+node_modules
+.env
+
+# multer's diskStorage destination for uploads/local-upload (see
+# middleware/upload-middleware.js) - files land here only briefly (image/video
+# uploads get deleted right after the Cloudinary upload succeeds; local-upload
+# files stay here on purpose). The folder itself must exist for multer to
+# write to it at all, hence uploads/.gitkeep being tracked despite this rule.
+uploads/*
+!uploads/.gitkeep

@@ -1,0 +1,107 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Author {
+  id        Int      @id @default(autoincrement())
+  name      String   @unique
+  email     String?
+  bio       String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  books     Book[]
+}
+
+model Publisher {
+  id        Int      @id @default(autoincrement())
+  name      String   @unique
+  email     String?
+  country   String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  books     Book[]
+}
+
+model Genre {
+  id        Int      @id @default(autoincrement())
+  name      String   @unique
+  description String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  books     Book[]
+}
+
+model Book {
+  id            Int      @id @default(autoincrement())
+  title         String
+  description   String?
+  isbn          String   @unique
+  publishedDate DateTime
+  pages         Int?
+  price         Float?
+  stock         Int      @default(1)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  
+  authorId      Int
+  author        Author   @relation(fields: [authorId], references: [id], onDelete: Cascade)
+  
+  publisherId   Int
+  publisher     Publisher @relation(fields: [publisherId], references: [id], onDelete: Cascade)
+  
+  genres        Genre[]
+  reviews       Review[]
+  borrowRecords BorrowRecord[]
+}
+
+model Review {
+  id        Int      @id @default(autoincrement())
+  rating    Int      // 1-5 stars
+  comment   String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  bookId    Int
+  book      Book     @relation(fields: [bookId], references: [id], onDelete: Cascade)
+  
+  memberId  Int
+  member    LibraryMember @relation(fields: [memberId], references: [id], onDelete: Cascade)
+  
+  @@unique([bookId, memberId])
+}
+
+model LibraryMember {
+  id            Int      @id @default(autoincrement())
+  name          String
+  email         String   @unique
+  phone         String?
+  address       String?
+  membershipDate DateTime @default(now())
+  isActive      Boolean  @default(true)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  
+  reviews       Review[]
+  borrowRecords BorrowRecord[]
+}
+
+model BorrowRecord {
+  id            Int      @id @default(autoincrement())
+  borrowDate    DateTime @default(now())
+  dueDate       DateTime
+  returnedDate  DateTime?
+  fine          Float    @default(0)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  
+  bookId        Int
+  book          Book     @relation(fields: [bookId], references: [id], onDelete: Cascade)
+  
+  memberId      Int
+  member        LibraryMember @relation(fields: [memberId], references: [id], onDelete: Cascade)
+}

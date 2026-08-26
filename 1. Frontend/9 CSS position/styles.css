@@ -1,0 +1,39 @@
+/* p{
+    position: static;
+} */
+div{
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    background-color:aqua;
+    border: 1px solid black;
+}
+#box3{
+   position: relative;  /*by just writing this line,nothing changes.
+   You should add top,left,right,bottom in order to change something. */
+   top: 100px; /* Top se 100 px down move kro */
+   left: 50px; /*left se right ki traf move kro */
+}
+#box1{
+    position: fixed; /*fixing the position of a box in one place
+    meaning: viewport/browser pe ek particular element ko fix krna such that on scrolling also it remains in same position.
+    In order to do this first increase the height of div/parent container so that page can be scrolled down*/
+}
+.wrapper{
+    height:1000px;
+    background-color:yellow;
+    width:100vw;
+}
+#box4{
+    position: sticky;
+    top: 0px;/*toggles between position-relative and position-fixed
+    Meaning: initially when page loads it behaves as position-relative and as soon as page is scrolled it behaves like position-fixed.
+    It is positioned relative until a given offset position is met in viewport-then it sticks in place(like position:fixed)*/
+}
+#box5{
+    position: absolute;
+    /* An element with position: absolute; is positioned relative to the nearest positioned ancestor which is non static.
+    If an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling. */
+}
+
+/* Search for the difference between position:fixed and position:sticky */
