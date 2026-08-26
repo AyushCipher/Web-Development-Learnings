@@ -1,0 +1,50 @@
+.modal-image {
+    width: 100%;
+    height: auto;
+    max-height: 30rem;
+    object-fit: cover;
+    border-radius: 1rem;
+    opacity: 0.5;
+  }
+  
+  .modal-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    color: #fff;
+    letter-spacing: 0.1rem;
+    margin-top: 2rem;
+  }
+  
+  .modal-source,
+  .modal-date {
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 1.4rem;
+    color: #bbb;
+    margin-top: 1rem;
+  }
+  
+  .modal-content-text {
+    font-size: 1.6rem;
+    margin-top: 2rem;
+    line-height: 2.7rem;
+    color: #ddd;
+  }
+  
+  .read-more-link {
+    width: 15rem;
+    display: inline-block;
+    background: linear-gradient(to right, #b88efc, #6877f4);
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    color: #fff;
+    border-radius: 5rem;
+    font-size: 1.6rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+  }
+  
+  .read-more-link:active {
+    transform: translateY(0.1rem);
+  }
+  

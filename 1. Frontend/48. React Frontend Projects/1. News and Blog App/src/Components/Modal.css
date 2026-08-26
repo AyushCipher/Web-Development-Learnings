@@ -1,0 +1,36 @@
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    width: 90%;
+    max-width: 60rem;
+    height: auto;
+    max-height: 80%;
+    background-color: #111214;
+    padding: 4rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 5rem 4rem rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow-y: scroll;
+  }
+  
+  .modal-content::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+  }
+  

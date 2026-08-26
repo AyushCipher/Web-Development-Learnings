@@ -1,0 +1,29 @@
+.blogs-modal-image {
+    max-width: 100%;
+    height: 60%;
+    object-fit: cover;
+    border-radius: 1rem;
+    opacity: 0.5;
+  }
+  
+  .blogs-modal-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    color: #fff;
+    letter-spacing: 0.1rem;
+    margin-top: 2rem;
+  }
+  
+  .blog-post-content {
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 1.4rem;
+    color: #bbb;
+    margin-top: 1rem;
+    overflow-y: scroll;
+    max-height: 20rem;
+  }
+  
+  .blog-post-content::-webkit-scrollbar {
+    display: none;
+  }
+  

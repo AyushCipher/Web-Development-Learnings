@@ -1,0 +1,93 @@
+.calendar {
+    width: 100%;
+    min-width: 28rem;
+    height: calc(55% - 2rem);
+    background-color: #111214;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    display: grid;
+    place-items: center;
+  }
+  
+  .navigate-date {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 1rem;
+    padding-left: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .navigate-date h2 {
+    font-size: 2rem;
+    font-weight: 300;
+    color: #bbb;
+  }
+  
+  .buttons {
+    display: flex;
+    column-gap: 1rem;
+    margin-left: auto;
+  }
+  
+  .buttons i {
+    width: 3.5rem;
+    height: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2c3542;
+    border-radius: 50%;
+    font-size: 2rem;
+    color: #b88efc;
+    cursor: pointer;
+  }
+  
+  .weekdays {
+    width: 100%;
+    display: flex;
+    margin: 1rem 0;
+  }
+  
+  .weekdays span {
+    width: calc(100% / 7);
+    font-size: 1.3rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #78879e;
+    letter-spacing: 0.1rem;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .days {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  .days span {
+    width: calc(100% / 7);
+    aspect-ratio: 1;
+    font-size: 1.3rem;
+    color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .current-day {
+    font-size: 2rem !important;
+    color: #fff;
+    background: linear-gradient(to right, #b88efc, #6877f4);
+    border-radius: 50%;
+  }
+  
+  @media (max-width: 900px) {
+    .calendar {
+      height: 100%;
+    }
+  }
+  
