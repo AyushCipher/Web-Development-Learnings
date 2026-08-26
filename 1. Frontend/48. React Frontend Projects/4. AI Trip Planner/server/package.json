@@ -1,0 +1,12 @@
+{
+  "name": "trip-planner-server",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node --env-file=../.env index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0"
+  }
+}
