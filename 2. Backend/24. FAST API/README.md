@@ -69,6 +69,7 @@ Interactive API documentation will be available live at:
 | **14** | `14. TESTING` | Automated unit & integration testing using `pytest` and `httpx.AsyncClient` / `TestClient`, mocking responses, and asserting API contracts. |
 | **15** | `15. REQUESTS` | Making outbound HTTP calls from FastAPI endpoints to external microservices/APIs using `requests` and `httpx`. |
 | **16** | `16. SCRAPING, CACHING & RATE LIMITING` | Data extraction with BeautifulSoup4 (`bs4`), IP/endpoint rate limiting using `slowapi`, and in-memory caching strategies. |
+| **17** | `17. pgvector` | Vector Database with pgvector & PostgreSQL: Foundations of AI, vector embeddings, Cosine/L2/Inner Product search, HNSW vs IVFFlat vs StreamingDiskANN, RAG, and Text-to-SQL. |
 
 ---
 
@@ -87,7 +88,7 @@ pytest "14. TESTING" -v
 - **Framework**: `FastAPI` (High performance, async-ready, auto OpenAPI docs)
 - **Server**: `Uvicorn` (ASGI web server)
 - **Validation**: `Pydantic v2` (Type annotations & runtime data validation)
-- **Database & ORM**: `SQLAlchemy`, `SQLite3`
+- **Database & ORM**: `SQLAlchemy`, `SQLite3`, `PostgreSQL`, `pgvector`
 - **Security & Auth**: `python-jose` (JWT), `passlib[bcrypt]` (Hashing)
 - **Testing**: `pytest`, `httpx`
-- **Rate Limiting & Utilities**: `slowapi`, `beautifulsoup4`, `python-multipart`, `python-dotenv`
+- **Rate Limiting, AI & Utilities**: `pgvector`, `slowapi`, `beautifulsoup4`, `python-multipart`, `python-dotenv`

@@ -1,0 +1,33 @@
+﻿{
+  "name": "17-pgvector-mastery",
+  "version": "1.0.0",
+  "description": "Foundations of AI with PostgreSQL, pgvector, pgvectorscale, and pgai with hands-on demo application",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "node src/main.js",
+    "dev": "nodemon src/main.js"
+  },
+  "keywords": [
+    "postgres",
+    "pgvector",
+    "pgvectorscale",
+    "pgai",
+    "hnsw",
+    "ivfflat",
+    "diskann",
+    "rag",
+    "semantic-search",
+    "ai-engineer",
+    "text-to-sql"
+  ],
+  "author": "Ayush",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "pg": "^8.11.5",
+    "pgvector": "^0.1.8"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}

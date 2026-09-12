@@ -46,7 +46,7 @@ Google OAuth) - those are called out in their own folder.
 | 14. NodeJS-Redis-Kafka | Redis data structures/caching/pub-sub, and a Kafka (Redpanda) producer/consumer app |
 | 15. Nodejs-SocialMedia-Microservices | A 9-service microservices architecture (API gateway, identity, post, media, search, like, comment, notification, chat) with RabbitMQ events and Redis caching |
 | 16. Docker(Basics-Advanced) | Containerizing a MERN app: Dockerfiles, Compose, nginx reverse proxy |
-| 17. Postgres with NodeJs | Raw `pg`, Prisma, and Drizzle ORM against PostgreSQL |
+| 17. Postgres with NodeJs | Raw `pg`, Prisma, Drizzle ORM, and pgvector (Vector embeddings, similarity search, HNSW/IVFFlat indexing, RAG, Hybrid Search) |
 | 18. Nest-js | NestJS fundamentals (travel-tracker, file-upload, core concepts) |
 | 19. bun-and-hono | The Bun runtime with the Hono web framework |
 | 20. Nextjs-Full-Notes | Next.js App Router in depth (concepts reference, a Blog app, an Asset Manager with Drizzle/PayPal/Cloudinary/Better Auth) |

@@ -1,0 +1,21 @@
+﻿{
+  "name": "postgres-pgvector-learning",
+  "version": "1.0.0",
+  "description": "Comprehensive guide and hands-on implementation of pgvector with PostgreSQL and Node.js",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "node src/main.js",
+    "dev": "nodemon src/main.js"
+  },
+  "keywords": ["postgres", "pgvector", "vector-database", "embeddings", "rag", "semantic-search", "hnsw", "ivfflat", "ai"],
+  "author": "Ayush",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "pg": "^8.11.5",
+    "pgvector": "^0.1.8"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
