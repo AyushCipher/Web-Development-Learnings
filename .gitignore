@@ -1,9 +1,23 @@
 # This repo is meant to hold only "1. Frontend" and "2. Backend" - keep
-# "3. Main Projects" out of tracking/pushes entirely.
+# "3. Main Projects" and "4. Main Resume" out of tracking/pushes entirely.
 3. Main Projects/
+4. Main Resume/
+SIH/
 
-# Dependencies
+# Node Dependencies
 node_modules/
+
+# Python / Virtual Environments & Caches
+venv/
+.venv/
+env/
+ENV/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+*.db
+*.sqlite3
 
 # Environment files (never commit real secrets)
 .env
@@ -26,6 +40,8 @@ error.log
 # OS/editor cruft
 .DS_Store
 Thumbs.db
+desktop.ini
+*.zip
 
 # Third-party paid/copyrighted course material - not ours to redistribute
 2. Backend/21. Agentic AI/Advanced Backend + AI Full Course .pdf

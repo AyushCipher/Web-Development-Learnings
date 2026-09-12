@@ -53,6 +53,7 @@ Google OAuth) - those are called out in their own folder.
 | 21. Agentic AI | LangChain + LangGraph agents, RAG with a vector database (Qdrant), and Model Context Protocol (MCP) |
 | 22. Deployment | EC2 deploy demo: Docker + Compose + a GitHub Actions SSH workflow |
 | 23. Basic Testing(Vitest) | Unit, boundary, integration, and E2E testing examples with Vitest against a small cart API |
+| 24. FAST API | Python FastAPI: Pydantic models, DI/Depends, OAuth2/JWT auth, SQLAlchemy ORM, file uploads, middlewares, caching & rate limiting, pytest |
 | 52. Backend-4 (Theory) | Written notes/theory accompanying the practical folders |
 
 ## A few notes on specific folders
