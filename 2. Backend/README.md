@@ -30,7 +30,8 @@ Google OAuth) - those are called out in their own folder.
 
 | Folder | Topic |
 |---|---|
-| 1. Node-tutorial | Raw Node.js: HTTP module, modules/`require`, npm, Mongoose basics |
+| 0. DATABASE & SYSTEM DESIGN | Database concepts (SQL, queries) and System Design (Core concepts & real-world architectures) |
+| 1. Node-tutorial | Raw Node.js: HTTP module, modules/`require`, npm, event-loop, buffers, streams |
 | 2. Express-tutorial | Express fundamentals through an MVC-structured "Extended" app |
 | 3. EJS-tutorial | Server-rendered views with EJS templating |
 | 4. Rest-API-Dev(Not Modular) | A REST API written flat, before introducing MVC structure |
