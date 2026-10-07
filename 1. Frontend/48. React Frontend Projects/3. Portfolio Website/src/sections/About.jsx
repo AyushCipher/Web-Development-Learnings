@@ -28,16 +28,17 @@ export default function About() {
         >
           {/* Avatar / Card */}
           <motion.div
-            className="relative w-[160px] h-[160px] md:w-[200px] md:h-[200px] rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-[#1CD8D2]/20 to-[#302b63]/20 border border-[#1CD8D2]/25"
+            className="relative w-[180px] h-[230px] sm:w-[200px] sm:h-[260px] md:w-[220px] md:h-[280px] rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-[#1CD8D2]/20 to-[#302b63]/20 border border-[#1CD8D2]/30 flex-shrink-0"
             whileHover={{ scale: 1.02 }}
             transition={{ type: "spring", stiffness: 200, damping: 18 }}
             aria-hidden="true"
           >
-            {/* Replace with your actual avatar image */}
-            
-            <div className="absolute inset-0 " />
-           
-            <img src={p} alt="test" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent z-10 pointer-events-none" />
+            <img
+              src={p}
+              alt="Ayush Verma"
+              className="w-full h-full object-cover object-center"
+            />
           </motion.div>
 
           {/* Name + Role + Bio + CTAs */}
@@ -49,9 +50,14 @@ export default function About() {
               Software Developer · AI/ML Engineer
             </p>
 
-            <p className="mt-4 text-gray-300 leading-relaxed text-base sm:text-lg max-w-2xl md:max-w-3xl">
-              I build scalable, modern applications with a strong emphasis on clean architecture, high performance, and intuitive user experience. My toolkit includes JavaScript, TypeScript, React.js, Redux.js, Next.js, Tailwind CSS, Node.js, Express.js, MongoDB, SQL, Python, and Flask, along with tools like Git/GitHub, Redis, Kafka, RabbitMQ, AWS, and Docker. I specialize in developing robust APIs, efficient backend systems, and seamless frontends and transforming ideas into production-ready applications that are reliable, performant, and built to scale.            
-            </p>
+            <div className="mt-4 text-gray-300 leading-relaxed text-base sm:text-lg max-w-2xl md:max-w-3xl space-y-3">
+              <p>
+                I build full stack applications and AI powered systems that are designed to be fast, reliable, and easy to scale. I work across React, Next.js, Node.js, Python, FastAPI, PostgreSQL, MongoDB, Redis, Kafka, Docker, and AWS, with experience designing APIs, backend services, and distributed systems.
+              </p>
+              <p>
+                My recent work focuses on AI and machine learning, including LLM applications, AI agents, RAG, LangChain, LangGraph, embeddings, vector databases, PyTorch, and model evaluation. I enjoy taking ideas from an early concept to a working product and building the engineering around them so they can actually be used in production.
+              </p>
+            </div>
 
             {/* Quick stats */}
             <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 max-w-xl">
